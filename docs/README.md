@@ -12,14 +12,14 @@ SocialBusinessStarter is a web app inspired by Kickstarter built using Ruby on R
 - Backing projects & rewards
 - Search
 - Categories / Discover feature
-- Production README ** LINK **
+- Production README ** LINK SOON **
 
 ## Design Docs
-- View Wireframes
-- React Components
-- API endpoints
-- DB schema
-- Sample State
+- [View Wireframes]: ./wireframes
+- [React Components]: ./components-hierarchy.md
+- [API endpoints]: ./api-endpoints.md
+- [DB schema]: ./schema.md
+- [Sample State]: ./sample-state.md
 
 ## Implementation Timeline
 ### Phase 1: Backend setup and Front End User Authentication (2 days)
