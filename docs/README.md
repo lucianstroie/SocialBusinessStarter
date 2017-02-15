@@ -44,3 +44,6 @@ Objective: Add presentational components that change the ordering of projects to
 - Category highlight reel on front page
 - HTTPS
 - Payments
+
+#### Image Sources
+http://www.emoji.co.uk/files/twitter-emojis/animals-nature-twitter/10666-penguin.png
