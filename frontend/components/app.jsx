@@ -3,7 +3,7 @@ import GreetingContainer from './greeting/greeting_container';
 
 const App = ({ children }) => (
   <div>
-    <h1>Social Business Starter Index</h1>
+    <h1>Social Business Starter Idx</h1>
     <GreetingContainer />
     { children }
   </div>
