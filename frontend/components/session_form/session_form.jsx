@@ -71,20 +71,24 @@ class SessionForm extends React.Component {
 		if (this.props.formType === "signup") {
 			return (
 				<div className="signup-input">
-					<label> Name:
+					<label>
 						<input type="text"
 							value={this.state.name}
 							onChange={this.update("name")}
-							className="login-input" />
+							placeholder="Name"
+							className="login-input form-box" />
 					</label>
 					<br/>
-					<label> Location:
+					<label>
 						<input type="text"
 							value={this.state.location}
 							onChange={this.update("location")}
-							className="login-input" />
+							placeholder="Location"
+							className="login-input form-box" />
 					</label>
-					<input type="file" onChange={this.updateFile}/>
+					<br/>
+					<input type="file" onChange={this.updateFile}
+						className="form-box"/>
 					<img src={this.state.imageUrl} />
 				</div>
 			);
@@ -121,34 +125,40 @@ class SessionForm extends React.Component {
 		return (
 			<div className="login-form-container">
 				<form onSubmit={this.handleSubmit} className="login-form-box">
-					Welcome to Social Business Starter!
+
 					<br/>
-					Please {this.props.formType} or {this.navLink()}
+					<h1 id="title">{this.props.formType}</h1>
 					{this.renderErrors()}
 					<div className="login-form">
 						<br/>
-						<label> Username:
+						<label>
 							<input type="text"
 								value={this.state.username}
 								onChange={this.update("username")}
-								className="login-input" />
+								className="login-input form-box"
+								placeholder="Username"/>
 						</label>
 						<br/>
-						<label> Password:
+						<label>
 							<input type="password"
 								value={this.state.password}
 								onChange={this.update("password")}
-								className="login-input" />
+								className="login-input form-box"
+								placeholder="Password"/>
 						</label>
 						<br/>
 
 							{ this.signupInput() }
 						<br/>
-						<input type="submit" value="Submit" />
+						<input className="login-button form-box" type="submit" value={this.props.formType} />
+						<button className="guest-button link-form-box form-box"
+							onClick={ this.guestLogIn.bind(this) }>Guest Log In</button>
+					</div>
+					<div className="redirect">
+						{this.navLink()}
 					</div>
 				</form>
-				<button onClick={ this.guestLogIn.bind(this) }>Guest Log In</button>
-			</div>
+		</div>
 		);
 	}
 
