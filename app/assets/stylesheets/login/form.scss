@@ -1,7 +1,13 @@
-body{
+
+.login-form-background {
+  height: 100%;
+  display: flex;
+  justify-content: center;
   background-color: $eggshell;
+  padding: 60px 0px;
 }
 .form-box {
+
   background-color: white;
   width: 94%;
   border-radius: 5px;
@@ -13,10 +19,11 @@ body{
 }
 
 .login-form-container {
+  border: 1px solid $form-border;
   background-color: white;
   box-sizing: border-box;
-  width: 360px;
-  padding: 0px 15px;
+  width: 380px;
+  height: 80%;
   font-family: $font-family;
   border-radius: 1px;
 }
@@ -26,13 +33,19 @@ body{
 
 .login-form {
   background-color: inherit;
+  padding: 0px 10px 10px 10px;
+}
+
+#photo-upload-btn {
+  height: 0px;
+  display: none;
 }
 
 
 .login-button {
   background-color: $button-green;
   border-color: $button-green-hover;
-  margin-bottom: 50px;
+  margin-bottom: 10px;
   text-align: center;
   color: white;
   text-transform: capitalize;
@@ -46,7 +59,7 @@ body{
 .guest-button {
   background-color: $button-blue;
   border-color: $button-blue-hover;
-  margin-bottom: 8px;
+  margin-bottom: 28px;
   text-align: center;
   color: white;
   letter-spacing: 1px;
@@ -68,7 +81,7 @@ body{
 
 #title {
   font-size: 32px;
-  margin-left: 10px;
+  margin-left: 20px;
   text-transform: capitalize;
 
 }

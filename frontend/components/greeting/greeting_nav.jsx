@@ -10,19 +10,19 @@ class Greeting extends React.Component {
   sessionLinks () {
     return(
       <nav className="login-signup">
-        <li><Link to="/login" activeClassName="current">Login</Link></li>
+        <Link to="/login" activeClassName="current">Log in</Link>
 
-        <li><Link to="/signup" activeClassName="current">Sign up!</Link></li>
+        <Link to="/signup" activeClassName="current">Sign up</Link>
       </nav>
     );
   }
 
+
   personalGreeting (currentUser, logout) {
     return(
     <hgroup className="header-group">
-      <li><img src={currentUser.image_url} /></li>
-      <li><h2 className="header-name">Hi, {currentUser.username}!</h2></li>
-      <li><button className="header-button" onClick={logout}>Log Out</button></li>
+      <img src={currentUser.image_url} className="user-pic" id="user-header"/>
+      <button className="header-button" id="user-header" onClick={logout}>Log Out</button>
     </hgroup>
   );}
 
@@ -33,11 +33,11 @@ class Greeting extends React.Component {
 
   render(){
     return(
-      <div>
+      <div className="nav-bar-container">
         <section className="left">
 
-          <li><Link to="/" className="explore"><i className="fa fa-compass" aria-hidden="true"></i> Explore</Link></li>
-        <li><Link to="/" className="new" >Start A New Project</Link></li>
+          <li><Link to="/" className="explore"><i className="fa fa-compass fa-lg" aria-hidden="true"></i>Explore</Link></li>
+        	<li><Link to="/" className="new" >Start A New Project</Link></li>
         </section>
         <section className="center">
           <li><Link to="/" className="logo" >SocialBusinessStarter</Link></li>
