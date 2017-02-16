@@ -40,7 +40,7 @@ class Greeting extends React.Component {
         	<li><Link to="/" className="new" >Start A New Project</Link></li>
         </section>
         <section className="center">
-          <li><Link to="/" className="logo" >SocialBusinessStarter</Link></li>
+          <li><Link to="/" id="logo" >SocialBusinessStarter</Link></li>
         </section>
         <section className="right">
           <li><button><i className="fa fa-search" aria-hidden="true"></i></button></li>

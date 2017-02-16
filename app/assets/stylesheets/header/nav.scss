@@ -6,30 +6,18 @@
   justify-content: space-between;
   font-family: $font-family;
   border-bottom: 1px solid $form-border;
-
 }
 
 section {
   flex: 1;
   display: flex;
   justify-content: center;
+  align-items: center;
+  flex-direction: row;
 }
 section:first-child > span { margin-right: auto; }
 section:last-child > span { margin-left: auto; }
 
-section {
-  align-items: center;
-}
-
-section right {
-  justify-content: flex-end;
-}
-
-
-.nav-bar-container > section {
-  display: flex;
-  flex-direction: row;
-}
 .nav-bar-container > login-signup {
   display: flex;
     flex-direction: row;
@@ -50,8 +38,8 @@ section right {
   margin-right: 25px;
 }
 
-.login-signup a:last-child {
-  padding-right: 0px;
+.center {
+  padding: 25px;
 }
 
 .user-pic {
@@ -61,5 +49,4 @@ section right {
 
 .fa-compass {
   color: $button-green;
-
 }
