@@ -50,3 +50,11 @@ section:last-child > span { margin-left: auto; }
 .fa-compass {
   color: $button-green;
 }
+
+.right a, .left a {
+  padding: 0px 8px;
+}
+
+.left > a > i {
+  padding-right: 3px;
+}

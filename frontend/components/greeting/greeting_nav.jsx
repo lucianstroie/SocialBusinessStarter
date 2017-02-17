@@ -36,14 +36,14 @@ class Greeting extends React.Component {
       <div className="nav-bar-container">
         <section className="left">
 
-          <li><Link to="/" className="explore"><i className="fa fa-compass fa-lg" aria-hidden="true"></i>Explore</Link></li>
-        	<li><Link to="/" className="new" >Start A New Project</Link></li>
+          <Link to="/" className="explore"><i className="fa fa-compass fa-lg" aria-hidden="true"></i>Explore</Link>
+        	<Link to="/" className="new" >Start A New Project</Link>
         </section>
         <section className="center">
-          <li><Link to="/" id="logo" >SocialBusinessStarter</Link></li>
+          <Link to="/" id="logo" >SocialBusinessStarter</Link>
         </section>
         <section className="right">
-          <li><button><i className="fa fa-search" aria-hidden="true"></i></button></li>
+          <a href="#"><i className="fa fa-search" aria-hidden="true"></i></a>
         {this.rightNav(this.props)}
         </section>
 

@@ -1,10 +1,11 @@
 import React from 'react';
 import GreetingContainer from './greeting/greeting_container';
+import ProjectIndexContainer from './projects/project_index_container';
 
 const App = ({ children }) => (
   <div>
-    <h1>Social Business Starter Idx</h1>
     <GreetingContainer />
+    <ProjectIndexContainer />
     { children }
   </div>
 );
