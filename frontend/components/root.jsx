@@ -22,6 +22,10 @@ const Root = ({ store }) => {
         <Route path="/" component={ App } />
           <Route path="/login" component={ SessionFormContainer } onEnter={_redirectIfLoggedIn}/>
           <Route path="/signup" component={ SessionFormContainer } onEnter={_redirectIfLoggedIn}/>
+          <Route path="/projects/"/>
+          <Route path="/projects/new"/>
+          <Route path="/projects/:projectId"/>
+          <Route path="/projects/:projectId/edit"/>
       </Router>
     </Provider>
   );

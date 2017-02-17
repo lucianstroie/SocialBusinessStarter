@@ -7,7 +7,7 @@
 |---------------|---------|-------------------------|
 |id             |integer  |not null, primary key    |
 |username       |string   |not null, indexed, unique|
-|image_url      |string   |                         |
+|image_url      |string   |*                        |
 |location       |string   |                         |
 |name           |string   |not null                 |
 |password_digest|string   |not null                 |
@@ -22,7 +22,7 @@
 |title          |string   |not null                                          |
 |subtitle       |string   |not null                                          |
 |body           |text     |not null                                          |
-|project_pic    |string   |not null                                          |
+|project_pic    |string   |*                                                 |
 |end_date       |date     |not null                                          |
 |category       |string   |not null                                          |
 |location       |string   |not null                                          |
