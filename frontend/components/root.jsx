@@ -6,6 +6,7 @@ import { Router, Route, IndexRoute, hashHistory } from 'react-router';
 import App from './app';
 import SessionFormContainer from './session_form/session_form_container';
 import ProjectIndexContainer from './projects/project_index_container';
+import ProjectFormContainer from './projects/project_form_container';
 
 const Root = ({ store }) => {
 
@@ -25,9 +26,9 @@ const Root = ({ store }) => {
           <Route path="/login" component={ SessionFormContainer } onEnter={_redirectIfLoggedIn}/>
           <Route path="/signup" component={ SessionFormContainer } onEnter={_redirectIfLoggedIn}/>
           <Route path="/projects" component={ ProjectIndexContainer }/>
-          <Route path="/projects/new"/>
+          <Route path="/projects/new" component={ ProjectFormContainer }/>
           <Route path="/projects/:projectId"/>
-          <Route path="/projects/:projectId/edit"/>
+          <Route path="/projects/:projectId/edit" component={ ProjectFormContainer }/>
         </Route>
       </Router>
     </Provider>

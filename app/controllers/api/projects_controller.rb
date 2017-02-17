@@ -6,6 +6,7 @@ class Api::ProjectsController < ApplicationController
 
   def create
 		@project = Project.new(project_params)
+    @project.user = current_user
 		if @project.save
 			login(@project)
 			render :show

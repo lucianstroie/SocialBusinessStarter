@@ -18,5 +18,8 @@ class Project < ActiveRecord::Base
 
   validates :user_id, :title, :subtitle, :body, :end_date, :category, :location, presence: true
 
+  has_attached_file :image, default_url: "project_default.jpg"
+  validates_attachment_content_type :image, content_type: /\Aimage\/.*\Z/
+
   belongs_to :user
 end

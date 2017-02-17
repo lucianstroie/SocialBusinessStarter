@@ -5,7 +5,6 @@ import ProjectIndexContainer from './projects/project_index_container';
 const App = ({ children }) => (
   <div>
     <GreetingContainer />
-    <ProjectIndexContainer />
     { children }
   </div>
 );
