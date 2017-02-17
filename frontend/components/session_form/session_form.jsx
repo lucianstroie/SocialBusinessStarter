@@ -1,6 +1,7 @@
 import React from 'react';
 import { Link, withRouter } from 'react-router';
 import * as ApiUtil from "../../util/session_api_util";
+import Greeting from "../greeting/greeting_nav";
 
 class SessionForm extends React.Component {
 	constructor(props) {
@@ -126,43 +127,47 @@ class SessionForm extends React.Component {
 
 	render() {
 		return (
-			<div className="login-form-background">
-				<div className="login-form-container">
-					<form onSubmit={this.handleSubmit} className="login-form-box">
+			<div>
+				<Greeting />
+				<div className="login-form-background">
+					<div className="login-form-container">
+						<form onSubmit={this.handleSubmit} className="login-form-box">
 
-						<br/>
-						<h1 id="title">{this.props.formType}</h1>
-						{this.renderErrors()}
-						<div className="login-form">
 							<br/>
-							<label>
-								<input type="text"
-									value={this.state.username}
-									onChange={this.update("username")}
-									className="login-input form-box"
-									placeholder="Username"/>
-							</label>
-							<br/>
-							<label>
-								<input type="password"
-									value={this.state.password}
-									onChange={this.update("password")}
-									className="login-input form-box"
-									placeholder="Password"/>
-							</label>
-							<br/>
+							<h1 id="title">{this.props.formType}</h1>
+							{this.renderErrors()}
+							<div className="login-form">
+								<br/>
+								<label>
+									<input type="text"
+										value={this.state.username}
+										onChange={this.update("username")}
+										className="login-input form-box"
+										placeholder="Username"/>
+								</label>
+								<br/>
+								<label>
+									<input type="password"
+										value={this.state.password}
+										onChange={this.update("password")}
+										className="login-input form-box"
+										placeholder="Password"/>
+								</label>
+								<br/>
 
-								{ this.signupInput() }
-							<br/>
-							<input className="login-button form-box" type="submit" value={this.props.formType} />
-							<button className="guest-button link-form-box form-box"
-								onClick={ this.guestLogIn.bind(this) }>Guest Log In</button>
-						</div>
-						<div className="redirect">
-							{this.navLink()}
-						</div>
-					</form>
+									{ this.signupInput() }
+								<br/>
+								<input className="login-button form-box" type="submit" value={this.props.formType} />
+								<button className="guest-button link-form-box form-box"
+									onClick={ this.guestLogIn.bind(this) }>Guest Log In</button>
+							</div>
+							<div className="redirect">
+								{this.navLink()}
+							</div>
+						</form>
+				</div>
 			</div>
+
 		</div>
 		);
 	}
