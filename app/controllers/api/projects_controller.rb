@@ -5,10 +5,10 @@ class Api::ProjectsController < ApplicationController
   end
 
   def create
+    
 		@project = Project.new(project_params)
     @project.user = current_user
 		if @project.save
-			login(@project)
 			render :show
 		else
 			render json: @project.errors.full_messages, status: 422
