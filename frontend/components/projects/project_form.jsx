@@ -23,10 +23,16 @@ class ProjectForm extends React.Component {
 		);
 	}
 
+  componentDidMount() {
+      if (this.props.formType !== "/projects/new") {
+
+        this.props.fetchProject(this.props.params.projectId);
+      }
+    }
 
   componentWillReceiveProps(newProps) {
-    this.setState(newProps.project || {title: "", subtitle: "", body: "",
-      end_date: Date.now() , category: "", location: "", imageFile: null, imageURL: null});
+
+    this.setState(newProps.project);
   }
 
 
@@ -96,9 +102,9 @@ class ProjectForm extends React.Component {
     					<img className='user-uploaded-photo' src={this.state.imageUrl} />
             <br/>
               <select value={this.state.category} onChange={this.handleChange}>
+                <option defaultValue="default">Choose A Category</option>
                 <option value="grapefruit">Grapefruit</option>
                 <option value="lime">Lime</option>
-                <option selected defaultValue="coconut">Coconut</option>
                 <option value="mango">Mango</option>
               </select>
             <br/>

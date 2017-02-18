@@ -35,15 +35,16 @@ export const fetchProject = id => dispatch => (
 );
 
 export const createProject = project => dispatch => {
-  
+
   return APIUtil.createProject(project).then(project => dispatch(receiveProject(project)),
   err => dispatch(receiveErrors(err.responseJSON)))
 };
 
-export const updateProject = project => dispatch => (
-  APIUtil.updateProject(project).then(project => dispatch(receiveProject(project)),
+export const updateProject = project => dispatch => {
+  debugger
+  return APIUtil.updateProject(project).then(project => dispatch(receiveProject(project)),
   err => dispatch(receiveErrors(err.responseJSON)))
-);
+};
 
 export const deleteProject = id => dispatch => (
   APIUtil.deleteProject(id).then(project => dispatch(removeProject(project)))

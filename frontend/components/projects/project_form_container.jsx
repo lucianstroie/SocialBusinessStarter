@@ -13,9 +13,10 @@ const mapStateToProps = (state, ownProps) => {
 
 const mapDispatchToProps = (dispatch, ownProps) => {
   const formType = ownProps.location.pathname;
-  debugger
+
   const processForm = (formType === "/projects/new") ? createProject : updateProject;
   return {
+    fetchProject: project => dispatch(fetchProject(project)),
     processForm: project => dispatch(processForm(project)),
     formType
   };
