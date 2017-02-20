@@ -75,13 +75,14 @@ class ProjectForm extends React.Component {
 
   render() {
 
+    let title = (this.props.formType === "/Projects/New") ? "Start A New Project!" : "Edit Your Project!";
+
     return(
       <div>
         <div className="project-form-background">
           <div className="project-form-container">
-            <h1>Project Form!</h1>
-            <form onSubmit={this.handleSubmit}>
-              <h1 id="title">{this.props.formType}</h1>
+            <form onSubmit={this.handleSubmit} className="project-form">
+              <h1 className="project-title">{title}</h1>
               {this.renderErrors()}
               <div className="projects-form">
                 <input type="text"
@@ -129,7 +130,7 @@ class ProjectForm extends React.Component {
                   className="project-input"
                   placeholder="Add your projects description here" />
                 <br/>
-                <input className="projects-form" type="submit" value={this.props.handleSubmit} />
+                <input className="projects-form project-submit-button" type="submit" value={this.props.handleSubmit} />
               </div>
             </form>
           </div>

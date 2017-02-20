@@ -15,6 +15,10 @@
   font-family: $font-family;
   border-radius: 1px;
 }
+.project-form {
+  background-color: inherit;
+  padding: 25px 10px 10px 10px;
+}
 
 .project-input {
 
@@ -31,6 +35,9 @@
 .project-upload-button {
   background-color: $button-blue;
   border-color: $button-blue-hover;
+  border-radius: 5px;
+  margin: 10px 10px;
+  width: 94%;
   padding: 12px;
   margin-top: 5px;
   text-align: center;
@@ -41,4 +48,29 @@
 .project-upload-button:hover {
 background-color: $button-blue-hover;
 cursor: pointer;
+}
+
+.project-submit-button {
+  background-color: $button-green;
+  border-color: $button-green-hover;
+  border-radius: 5px;
+  margin: 30px 10px;
+  text-align: center;
+  color: white;
+  text-transform: capitalize;
+  letter-spacing: 1px;
+  display: block;
+  width: 94%;
+  padding: 12px;
+}
+
+.project-submit-button:hover{
+  background-color: $button-green-hover;
+}
+
+.project-title {
+  font-size: 32px;
+  margin-left: 10px;
+  margin-bottom: 20px;
+
 }
