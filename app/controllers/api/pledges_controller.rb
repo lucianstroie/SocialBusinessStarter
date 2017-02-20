@@ -5,7 +5,7 @@ class Api::PledgesController < ApplicationController
     if @pledge.save
       render :show
     else
-      render json: @project.errors.full_messages, status: 422
+      render json: @pledge.errors.full_messages, status: 422
     end
   end
 
@@ -18,7 +18,8 @@ class Api::PledgesController < ApplicationController
   end
 
   def update
-    @pledge = current_user.projects.pledges.find(params[:id])
+    debugger
+    @pledge = current_user.pledges.find(params[:id])
     if @pledge.update(pledge_params)
       render :show
     else
@@ -27,9 +28,9 @@ class Api::PledgesController < ApplicationController
   end
 
   def destroy
-    pledge = Pledge.find(params[:id])
-    pledge.destroy
-    render :index
+    @pledge = current_user.pledges.find(params[:id])
+    @pledge.destroy
+    render :show
   end
 
   private

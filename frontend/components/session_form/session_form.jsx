@@ -7,7 +7,7 @@ class SessionForm extends React.Component {
 	constructor(props) {
 		super(props);
 		this.state = { username: "", password: "",
-			name: "", location: "", imageFile: null, imageURL: null }; 
+			name: "", location: "", imageFile: null, imageURL: null };
 		this.handleSubmit = this.handleSubmit.bind(this);
 		this.guestLogIn = this.guestLogIn.bind(this);
 		this.updateFile = this.updateFile.bind(this);
@@ -108,7 +108,7 @@ class SessionForm extends React.Component {
 		if (this.props.formType !== "login") {
 			this.props.router.push("/login");
 		}
-		this.setState({username: "test", password: "starwars"}, () => {
+		this.setState({username: "guest", password: "starwars"}, () => {
 			this.props.processForm({user: this.state});
 		});
 	}

@@ -31,6 +31,7 @@ class User < ActiveRecord::Base
 	before_validation :ensure_session_token_uniqueness
 
 	has_many :projects
+	has_many :pledges, through: :projects
 
 	def password= password
 		self.password_digest = BCrypt::Password.create(password)

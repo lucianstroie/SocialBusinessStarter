@@ -2,7 +2,7 @@ import React from 'react';
 import { Link, hashHistory } from 'react-router';
 
 const PledgeItem = ({ pledge }) => {
-  debugger
+  
   return (
     <div className="pledge-item">
       <h1>Pledge {pledge.level} or more</h1>

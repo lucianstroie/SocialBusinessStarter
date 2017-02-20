@@ -73,9 +73,10 @@ class ProjectForm extends React.Component {
 		}
 	}
 
+
   render() {
 
-    let title = (this.props.formType === "/Projects/New") ? "Start A New Project!" : "Edit Your Project!";
+    let title = (this.props.formType === "/projects/new") ? "Start A New Project!" : "Edit Your Project!";
 
     return(
       <div>

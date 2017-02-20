@@ -15,4 +15,5 @@ class Pledge < ActiveRecord::Base
   validates :project_id, :level, :title, :description, presence: true
 
   belongs_to :project
+  belongs_to :user
 end

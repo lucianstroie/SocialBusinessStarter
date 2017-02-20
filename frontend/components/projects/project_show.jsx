@@ -2,6 +2,9 @@ import React from 'react';
 import { Link } from 'react-router';
 import PledgeItem from '../pledges/pledge';
 
+import PledgeFormContainer from '../pledges/pledge_form_container';
+
+
 class ProjectShow extends React.Component {
   constructor(props){
     super(props);
@@ -79,5 +82,7 @@ class ProjectShow extends React.Component {
     );
   }
 }
+
+            // <PledgeFormContainer />
 
 export default ProjectShow;
