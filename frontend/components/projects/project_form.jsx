@@ -77,57 +77,63 @@ class ProjectForm extends React.Component {
 
     return(
       <div>
-        <h1>Project Form!</h1>
-        <form onSubmit={this.handleSubmit}>
-          <h1 id="title">{this.props.formType}</h1>
-          {this.renderErrors()}
-          <div className="projects-form">
-            <input type="text"
-              value={this.state.title}
-              onChange={this.update("title")}
-              className="project-input"
-              placeholder="Project Title" />
-            <br/>
-            <input type="text"
-              value={this.state.subtitle}
-              onChange={this.update("subtitle")}
-              className="project-input"
-              placeholder="Subtitle" />
-              <br/>
-    					<input type="file" onChange={this.updateFile}
-    						className="form-box" id='photo-upload-btn'/>
-    					<div className='something-for-styling guest-button form-box' onClick={() => document.querySelector('#photo-upload-btn').click()}>
-    						Upload Your Photo
-    					</div>
-    					<img className='user-uploaded-photo' src={this.state.imageUrl} />
-            <br/>
-              <select value={this.state.category} onChange={this.handleChange}>
-                <option defaultValue="default">Choose A Category</option>
-                <option value="grapefruit">Grapefruit</option>
-                <option value="lime">Lime</option>
-                <option value="mango">Mango</option>
-              </select>
-            <br/>
-            <input type="text"
-              value={this.state.location}
-              onChange={this.update("location")}
-              className="project-input"
-              placeholder="Location" />
-            <br/>
-            <input type="date"
-              value={this.state.end_date}
-              onChange={this.update("end_date")}
-              className="project-input"/>
-            <br/>
-            <input type="textarea"
-              value={this.state.body}
-              onChange={this.update("body")}
-              className="project-input"
-              placeholder="Add your projects description here" />
-            <br/>
-            <input className="projects-form" type="submit" value={this.props.handleSubmit} />
+        <div className="project-form-background">
+          <div className="project-form-container">
+            <h1>Project Form!</h1>
+            <form onSubmit={this.handleSubmit}>
+              <h1 id="title">{this.props.formType}</h1>
+              {this.renderErrors()}
+              <div className="projects-form">
+                <input type="text"
+                  value={this.state.title}
+                  onChange={this.update("title")}
+                  className="project-input projects-form-box"
+                  placeholder="Project Title" />
+                <br/>
+                <input type="text"
+                  value={this.state.subtitle}
+                  onChange={this.update("subtitle")}
+                  className="project-input"
+                  placeholder="Subtitle" />
+                  <br/>
+        					<input type="file" onChange={this.updateFile}
+        						className="form-box" id='photo-upload-btn'/>
+                  <div className='project-upload-button projects-form-box'
+                    onClick={() => document.querySelector('#photo-upload-btn').click()}>
+        						Upload Your Photo
+        					</div>
+        					<img className='user-uploaded-photo' src={this.state.imageUrl} />
+                <br/>
+                  <select value={this.state.category} onChange={this.handleChange}
+                    className="projects-input">
+                    <option defaultValue="default">Choose A Category</option>
+                    <option value="grapefruit">Grapefruit</option>
+                    <option value="lime">Lime</option>
+                    <option value="mango">Mango</option>
+                  </select>
+                <br/>
+                <input type="text"
+                  value={this.state.location}
+                  onChange={this.update("location")}
+                  className="project-input"
+                  placeholder="Location" />
+                <br/>
+                <input type="date"
+                  value={this.state.end_date}
+                  onChange={this.update("end_date")}
+                  className="project-input"/>
+                <br/>
+                <input type="textarea"
+                  value={this.state.body}
+                  onChange={this.update("body")}
+                  className="project-input"
+                  placeholder="Add your projects description here" />
+                <br/>
+                <input className="projects-form" type="submit" value={this.props.handleSubmit} />
+              </div>
+            </form>
           </div>
-        </form>
+        </div>
       </div>
     );
   }
