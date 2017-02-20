@@ -106,7 +106,7 @@ class ProjectForm extends React.Component {
         					<img className='user-uploaded-photo' src={this.state.imageUrl} />
                 <br/>
                   <select value={this.state.category} onChange={this.handleChange}
-                    className="projects-input">
+                    className="projects-input category-dropdown">
                     <option defaultValue="default">Choose A Category</option>
                     <option value="grapefruit">Grapefruit</option>
                     <option value="lime">Lime</option>

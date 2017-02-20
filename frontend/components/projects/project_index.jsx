@@ -12,14 +12,16 @@ class ProjectIndex extends React.Component {
 
     return (
       <div className="index-background">
-      
+
       <div className="index-background">
         <div className="index-container">
               {
-                this.props.projects.map(project => (
-                  <ProjectIndexItem
-                    key={project.id}
-                    project={project} />
+                this.props.projects.map((project, idx )=> (
+
+                    <ProjectIndexItem
+                      key={project.id}
+                      project={project} />
+
                 ))
               }
         </div>
@@ -28,5 +30,6 @@ class ProjectIndex extends React.Component {
     );
   }
 }
+// { idx % 3 === 0 ? <h1>Some Text</h1> : null }
 
 export default ProjectIndex;

@@ -19,8 +19,9 @@ const ProjectIndexItem = ({ project }) => {
         <h2 className="subtitle-project">{project.subtitle}</h2>
       </div>
 
-      <h3 className="location-project">{project.location}</h3>
-
+      <div className="project-widget-summary">
+        <h3 className="location-project">{project.location}</h3>
+      </div>
     </div>
   );
 };
