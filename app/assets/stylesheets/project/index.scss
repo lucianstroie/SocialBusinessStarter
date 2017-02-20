@@ -1,0 +1,87 @@
+.background {
+
+
+  background-color: orange;
+}
+
+
+
+.index-background {
+  background-color: yellow;
+  display: flex;
+  justify-content: center;
+
+}
+
+.index-container {
+  background-color: pink;
+
+  display: flex;
+  justify-content: center;
+  list-style: none;
+  flex-direction: row;
+  justify-content: space-between;
+  font-family: $font-family;
+  border-bottom: 1px solid $form-border;
+  flex-flow: row wrap;
+  width: 1025px;
+
+}
+
+.category-title {
+  background-color: green;
+
+  width: 100%;
+  display: inline-block;
+  justify-content: center;
+}
+
+.project-widget {
+  background-color: red;
+
+  max-width: 320px;
+  border: 1px solid $form-border;
+  border-radius: 6px;
+
+  margin: auto;
+}
+
+.project-widget:hover {
+  background-color: green;
+  cursor: pointer;
+}
+
+.pic-project {
+ height: 40%;
+ border-top-right-radius: 6px;
+ border-top-left-radius: 6px;
+ overflow: hidden;
+}
+
+.text-container {
+  background-color: white;
+  padding: 15px 10px;
+  font-size: 12px;
+  height: 20%;
+  display: flex;
+  flex-direction: column;
+}
+.text-container h3 {
+  background-color: yellow;
+  margin: 0px
+}
+.user-project {
+  margin-bottom: 10px;
+}
+
+.user-project, .subtitle-project {
+  color: $text-detail;
+  font-size: 10px;
+}
+.subtitle-project {
+  min-height: 60px;
+}
+
+.location-project {
+  margin-top: 20px;
+}

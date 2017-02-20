@@ -9,21 +9,22 @@ class ProjectIndex extends React.Component {
   }
 
   render () {
-  
-    return (
-      <div>
-        <h1>Project Index</h1>
-          <ul>
-            {
-              this.props.projects.map(project => (
-                <ProjectIndexItem
-                  key={project.id}
 
-                  project={project} />
-              ))
-            }
-          </ul>
+    return (
+      <div className="index-background">
+      
+      <div className="index-background">
+        <div className="index-container">
+              {
+                this.props.projects.map(project => (
+                  <ProjectIndexItem
+                    key={project.id}
+                    project={project} />
+                ))
+              }
+        </div>
       </div>
+    </div>
     );
   }
 }

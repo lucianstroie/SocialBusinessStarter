@@ -2,10 +2,18 @@ import React from 'react';
 import { Link } from 'react-router';
 
 class ProjectShow extends React.Component {
+  constructor(props){
+    super(props);
+  }
+
   componentDidMount() {
 
     this.props.fetchProject(this.props.params.projectId);
   }
+
+  // componentWillReceiveProps(ownProps) {
+  //   this.props.fetchUser(this.props.project.user_id);
+  // }
 
 
   render(){
@@ -14,17 +22,47 @@ class ProjectShow extends React.Component {
       return (<div>Loading...
       </div>);
     }
-
+    console.log(this.props.project)
     return (
-      <div>
-        <h1>Hello</h1>
-        <h2>{project.title}</h2>
-        <h2>{project.subtitle}</h2>
-        <h2>{project.body}</h2>
-        <h2>{project.end_date}</h2>
-        <h2>{project.category}</h2>
+      <div className="project-show-page">
+        <div className="project-show-top">
+
+          <div className="project-user">
+            <img className="owner-pic"
+              src={project.owner_pic}/>
+            <h3>by {project.owner_name}</h3>
+          </div>
+          <div className="project-title-container">
+            <h1>{project.title}</h1>
+            <h2>{project.subtitle}</h2>
+          </div>
+        </div>
+
+        <div className="project-summary">
+          <img src={project.image_url}/>
+
+          <div className="project-summary-details">
+            <div className="raised">
+              <h1>$AMOUNT RAISED</h1>
+              <h2>pledged of $50,000</h2>
+            </div>
+
+            <div className="backers">
+              <h1>1,234</h1>
+              <h2>backers</h2>
+            </div>
+
+            <div className="days-left">
+              <h1>{project.days_left}</h1>
+              <h2>days left</h2>
+            </div>
+            <button className="contribute-button">Back This Project</button>
+          </div>
+        </div>
+
         <h2>{project.location}</h2>
-        <h2><img src={project.image_url}/></h2>
+        <h2>{project.body}</h2>
+        <h2>{project.category}</h2>
       </div>
     );
   }
