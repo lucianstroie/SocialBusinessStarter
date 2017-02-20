@@ -9,3 +9,9 @@ Project.destroy_all
 Project.create({ user_id: User.all.first.id, title: "first", subtitle: "works", body: "I wish", end_date: Date.new, category: "anything", location: "here"})
 Project.create({ user_id: User.all.second.id, title: "nexxt", subtitle: "works", body: "I wish", end_date: Date.new, category: "anything", location: "here"})
 Project.create({ user_id: User.all.second.id, title: "third", subtitle: "works", body: "I wish", end_date: Date.new, category: "anything", location: "here"})
+
+Pledge.destroy_all
+
+Pledge.create({ project_id: Project.all.first.id, level: 5, title: "pledge one", description: "here is the des"})
+Pledge.create({ project_id: Project.all.second.id, level: 99, title: "pledge two", description: "here is the des"})
+Pledge.create({ project_id: Project.all.second.id, level: 9, title: "pledge twotwo", description: "here is the des"})

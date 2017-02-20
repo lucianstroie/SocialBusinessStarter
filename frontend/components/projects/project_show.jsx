@@ -1,5 +1,6 @@
 import React from 'react';
 import { Link } from 'react-router';
+import PledgeItem from '../pledges/pledge';
 
 class ProjectShow extends React.Component {
   constructor(props){
@@ -11,9 +12,6 @@ class ProjectShow extends React.Component {
     this.props.fetchProject(this.props.params.projectId);
   }
 
-  // componentWillReceiveProps(ownProps) {
-  //   this.props.fetchUser(this.props.project.user_id);
-  // }
 
 
   render(){
@@ -23,6 +21,7 @@ class ProjectShow extends React.Component {
       </div>);
     }
     console.log(this.props.project)
+
     return (
       <div className="project-show-page">
         <div className="project-show-top">
@@ -60,8 +59,21 @@ class ProjectShow extends React.Component {
           </div>
         </div>
 
+        <div className="project-body">
+          <h2>{project.body}</h2>
+        </div>
+
+        <div>
+          {
+            this.props.project.pledges.map((pledge, idx) => (
+              <PledgeItem
+                key={pledge.id}
+                pledge={pledge}/>
+            ))
+          }
+        </div>
+
         <h2>{project.location}</h2>
-        <h2>{project.body}</h2>
         <h2>{project.category}</h2>
       </div>
     );

@@ -32,11 +32,11 @@
 |column name    |data type|details                                             |
 |---------------|---------|----------------------------------------------------|
 |id             |integer  |not null, primary key                               |
-|project_id     |date     |not null, foreign key (references project), indexed |
+|project_id     |integer  |not null, foreign key (references project), indexed |
 |level          |integer  |not null                                            |
 |title          |string   |not null,                                           |
 |description    |string   |not null,                                           |
-|delivery_date  |date     |not null,                                           |
+
 
 ## giving
 

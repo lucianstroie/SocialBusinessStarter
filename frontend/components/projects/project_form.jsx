@@ -128,7 +128,7 @@ class ProjectForm extends React.Component {
                   value={this.state.body}
                   onChange={this.update("body")}
                   className="project-input"
-                  placeholder="Add your projects description here" />
+                  placeholder="Add your project's description here" />
                 <br/>
                 <input className="projects-form project-submit-button" type="submit" value={this.props.handleSubmit} />
               </div>
