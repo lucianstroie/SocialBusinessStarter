@@ -124,8 +124,8 @@
 .project-body-title {
   background-color: white;
 
-  margin-top: 60px;
-  margin-bottom: 45px;
+  padding-top: 60px;
+  padding-bottom: 45px;
   font-size: 18px;
 }
 
@@ -143,13 +143,9 @@
 
 }
 
-.add-pledge {
-//Why isn't it takeing up height and the appropriate width?!!?
-  margin-bottom: 0px;
-}
-
 
 .pledge-button {
+  position: relative;
   background-color: $pledge-box;
 
   padding: 30px 25px;
@@ -158,10 +154,26 @@
   margin-bottom: 20px;
 }
 
-.pledge-button:hover{
-  background-color: $button-green;
+.pledge-button:hover {
   border: 1px solid $button-green-hover;
-  cursor: pointer;
+}
+
+.hidden {display: none}
+
+.pledge-screen {
+  position: absolute;
+  background-color: rgba(5, 175, 60, .85);
+  color: white;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  text-align: center;
+}
+
+.pledge-screen:after {
+  content: 'select this reward';
+  line-height: 180px;
 }
 
 .pledge-item h1 {

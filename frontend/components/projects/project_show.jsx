@@ -11,7 +11,6 @@ class ProjectShow extends React.Component {
   }
 
   componentDidMount() {
-
     this.props.fetchProject(this.props.params.projectId);
   }
 
@@ -29,12 +28,9 @@ class ProjectShow extends React.Component {
     } else {
       if (window.currentUser.id === project.user_id) {
         const link = `/projects/${project.id}/addpledge`;
-          addpledge = <Link to={link}
-            className="pledge-button">Add A Pledge Level</Link>;
+          addpledge = <Link to={link}>Add A Pledge Level</Link>;
       }
     }
-
-    console.log(this.props.project)
 
     return (
       <div className="project-show-page">
@@ -86,7 +82,7 @@ class ProjectShow extends React.Component {
 
           <div className="project-body-right">
             <h1 className="project-body-title">Support this project</h1>
-            <div className="add-pledge">
+            <div className="add-pledge pledge-button">
               { addpledge }
             </div>
 
