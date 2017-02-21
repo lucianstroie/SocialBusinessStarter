@@ -6,9 +6,9 @@ User.create({username: "test", password: "starwars", name: "testName"})
 
 Project.destroy_all
 
-Project.create({ user_id: User.all.first.id, title: "first", subtitle: "works", body: "I wish", end_date: Date.new, category: "anything", location: "here"})
-Project.create({ user_id: User.all.second.id, title: "nexxt", subtitle: "works", body: "I wish", end_date: Date.new, category: "anything", location: "here"})
-Project.create({ user_id: User.all.second.id, title: "third", subtitle: "works", body: "I wish", end_date: Date.new, category: "anything", location: "here"})
+Project.create({ user_id: User.all.first.id, goal: 999, title: "first", subtitle: "works", body: "I wish", end_date: Date.new, category: "anything", location: "here"})
+Project.create({ user_id: User.all.second.id, goal: 888, title: "nexxt", subtitle: "works", body: "I wish", end_date: Date.new, category: "anything", location: "here"})
+Project.create({ user_id: User.all.second.id, goal: 777, title: "third", subtitle: "works", body: "I wish", end_date: Date.new, category: "anything", location: "here"})
 
 Pledge.destroy_all
 

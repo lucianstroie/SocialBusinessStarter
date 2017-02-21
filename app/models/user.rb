@@ -32,6 +32,7 @@ class User < ActiveRecord::Base
 
 	has_many :projects
 	has_many :pledges, through: :projects
+	has_many :givings
 
 	def password= password
 		self.password_digest = BCrypt::Password.create(password)

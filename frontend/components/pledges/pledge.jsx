@@ -10,7 +10,7 @@ class PledgeItem extends React.Component {
   render() {
     const { pledge } = this.props;
     let pledgeRedirect = "";
-    if (window.currentUser.id === pledge.user_id) {
+    if (window.currentUser && window.currentUser.id === pledge.user_id) {
 
         pledgeRedirect = <button>Edit Pledge</button>;
 

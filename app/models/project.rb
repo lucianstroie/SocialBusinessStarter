@@ -16,6 +16,7 @@
 #  image_content_type :string
 #  image_file_size    :integer
 #  image_updated_at   :datetime
+#  goal               :integer          not null
 #
 
 class Project < ActiveRecord::Base
@@ -28,4 +29,5 @@ class Project < ActiveRecord::Base
   belongs_to :user
 
   has_many :pledges
+  has_many :givings, through: :pledges
 end
