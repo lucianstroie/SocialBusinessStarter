@@ -18,11 +18,24 @@ class ProjectShow extends React.Component {
 
 
   render(){
+
+
+
+    let addpledge = "";
     const project = this.props.project;
     if (!project) {
       return (<div>Loading...
       </div>);
+    } else {
+
+      if (window.currentUser.id === project.user_id) {
+        const link = `/projects/${project.id}/addpledge`;
+          
+          addpledge = <Link to={link} >Add A Pledge Level</Link>;
+
+      }
     }
+
     console.log(this.props.project)
 
     return (
@@ -74,6 +87,10 @@ class ProjectShow extends React.Component {
                 pledge={pledge}/>
             ))
           }
+        </div>
+
+        <div className="add-pledge">
+          { addpledge }
         </div>
 
         <h2>{project.location}</h2>

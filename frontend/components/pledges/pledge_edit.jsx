@@ -1,14 +1,10 @@
 import React from 'react';
 
-class PledgeForm extends React.Component {
+class PledgeEdit extends React.Component {
   constructor(props) {
     super(props);
-    this.state = {
-      title: "",
-      description: "",
-      level: 0,
-      project_id: this.props.params.projectId
-    };
+    this.state = this.props.pledge || {level: 5, title: "pledge one", description: "here is the des"};
+
     this.handleSubmit = this.handleSubmit.bind(this);
   }
 
@@ -23,6 +19,15 @@ class PledgeForm extends React.Component {
 			</ul>
 		);
 	}
+
+  componentDidMount() {
+    this.props.fetchPledge(this.props.params.pledgeId);
+  }
+
+  componentWillReceiveProps(newProps) {
+    debugger
+    this.setState(newProps.pledge);
+  }
 
   update(field) {
     return (e) => {
@@ -42,24 +47,24 @@ class PledgeForm extends React.Component {
       <div className="pledge-form-background">
         <div className="pledge-form-container">
           <form onSubmit={this.handleSubmit} className="pledge-form">
-            <h1 className="pledge-title">Add a New Pledge!</h1>
+            <h1 className="pledge-title">Edit Your Pledge!</h1>
             {this.renderErrors()}
             <div className="pledge-form">
               <input type="text"
                 value={this.state.level}
                 onChange={this.update("level")}
                 className="pledge-input"
-                placeholder="Pledge Title" />
+                 />
               <input type="text"
                 value={this.state.title}
                 onChange={this.update("title")}
                 className="pledge-input"
-                placeholder="Pledge Title" />
+                 />
               <input type="text"
                 value={this.state.description}
                 onChange={this.update("description")}
                 className="pledge-input"
-                placeholder="Description" />
+                 />
                 <br/>
                 <input className="pledge-form pledge-submit-button"
                   type="submit" value={this.props.handleSubmit} />
@@ -72,4 +77,4 @@ class PledgeForm extends React.Component {
   }
 }
 
-export default PledgeForm;
+export default PledgeEdit;

@@ -15,9 +15,13 @@ export const receivePledge = pledge => ({
 });
 
 export const removePledge = pledge => ({
-  type: pledge,
+  type: REMOVE_PLEDGE,
   pledge
 });
+
+export const fetchPledge = id => dispatch => {
+  return APIUtil.fetchPledge(id).then(pledge => dispatch(receivePledge(pledge)));
+};
 
 export const createPledge = pledge => dispatch => {
   return APIUtil.createPledge(pledge).then(pledge => dispatch(receivePledge(pledge)),

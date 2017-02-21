@@ -1,0 +1,76 @@
+.pledge-form-background {
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  background-color: $eggshell;
+  padding: 60px 0px;
+}
+
+.pledge-form-container {
+  border: 1px solid $form-border;
+  background-color: white;
+  box-sizing: border-box;
+  width: 380px;
+  height: 80%;
+  font-family: $font-family;
+  border-radius: 1px;
+}
+.pledge-form {
+  background-color: inherit;
+  padding: 25px 10px 10px 10px;
+}
+
+.pledge-input {
+
+  background-color: white;
+  width: 94%;
+  border-radius: 5px;
+  padding: 12px;
+  margin: 10px;
+  border: 1px solid $border-input ;
+  letter-spacing: 1px;
+  border-color: $border-input;
+}
+
+.pledge-upload-button {
+  background-color: $button-blue;
+  border-color: $button-blue-hover;
+  border-radius: 5px;
+  margin: 10px 10px;
+  width: 94%;
+  padding: 12px;
+  margin-top: 5px;
+  text-align: center;
+  color: white;
+  letter-spacing: 1px;
+}
+
+.pledge-upload-button:hover {
+background-color: $button-blue-hover;
+cursor: pointer;
+}
+
+.pledge-submit-button {
+  background-color: $button-green;
+  border-color: $button-green-hover;
+  border-radius: 5px;
+  margin: 30px 10px;
+  text-align: center;
+  color: white;
+  text-transform: capitalize;
+  letter-spacing: 1px;
+  display: block;
+  width: 94%;
+  padding: 12px;
+}
+
+.pledge-submit-button:hover{
+  background-color: $button-green-hover;
+}
+
+.pledge-title {
+  font-size: 32px;
+  margin-left: 20px;
+  margin-bottom: 20px;
+
+}

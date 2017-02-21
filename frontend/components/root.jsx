@@ -8,6 +8,8 @@ import SessionFormContainer from './session_form/session_form_container';
 import ProjectIndexContainer from './projects/project_index_container';
 import ProjectFormContainer from './projects/project_form_container';
 import ProjectShowContainer from './projects/project_show_container';
+import PledgeFormContainer from './pledges/pledge_form_container';
+import PledgeEditContainer from './pledges/pledge_edit_container';
 
 
 const Root = ({ store }) => {
@@ -31,6 +33,8 @@ const Root = ({ store }) => {
           <Route path="/projects/new" component={ ProjectFormContainer }/>
           <Route path="/projects/:projectId" component={ ProjectShowContainer }/>
           <Route path="/projects/:projectId/edit" component={ ProjectFormContainer }/>
+          <Route path="/projects/:projectId/addpledge" component={ PledgeFormContainer }/>
+          <Route path="/pledges/:pledgeId/edit" component={ PledgeEditContainer }/>
         </Route>
       </Router>
     </Provider>
