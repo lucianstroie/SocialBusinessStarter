@@ -1,9 +1,10 @@
 import React from 'react';
+import { withRouter } from 'react-router';
 
 class PledgeEdit extends React.Component {
   constructor(props) {
     super(props);
-    this.state = this.props.pledge || {level: 5, title: "pledge one", description: "here is the des"};
+    this.state = this.props.pledge || {level: 0, title: "", description: ""};
 
     this.handleSubmit = this.handleSubmit.bind(this);
   }
@@ -25,7 +26,6 @@ class PledgeEdit extends React.Component {
   }
 
   componentWillReceiveProps(newProps) {
-    debugger
     this.setState(newProps.pledge);
   }
 
@@ -37,8 +37,9 @@ class PledgeEdit extends React.Component {
 
   handleSubmit(e) {
     e.preventDefault();
-    this.props.createPledge(this.state);
-    //redirect to project show
+    this.props.updatePledge(this.state);
+    const url = `/projects/${this.state.project_id}`;
+    this.props.router.push(url);
   }
 
   render() {

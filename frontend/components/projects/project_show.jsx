@@ -27,12 +27,10 @@ class ProjectShow extends React.Component {
       return (<div>Loading...
       </div>);
     } else {
-
       if (window.currentUser.id === project.user_id) {
         const link = `/projects/${project.id}/addpledge`;
-          
-          addpledge = <Link to={link} >Add A Pledge Level</Link>;
-
+          addpledge = <Link to={link}
+            className="pledge-button">Add A Pledge Level</Link>;
       }
     }
 
@@ -75,25 +73,36 @@ class ProjectShow extends React.Component {
           </div>
         </div>
 
+        <h2 className="project-location">
+          <i className="fa fa-map-marker" aria-hidden="true"></i>
+            {project.location}
+        </h2>
+
         <div className="project-body">
-          <h2>{project.body}</h2>
+          <div className="project-body-text">
+            <h1 className="project-body-title">About this project</h1>
+            <h2>{project.body}</h2>
+          </div>
+
+          <div className="project-body-right">
+            <h1 className="project-body-title">Support this project</h1>
+            <div className="add-pledge">
+              { addpledge }
+            </div>
+
+            <div>
+              {
+                this.props.project.pledges.map((pledge, idx) => (
+                  <PledgeItem
+                    key={pledge.id}
+                    pledge={pledge}/>
+                ))
+              }
+            </div>
+          </div>
+
         </div>
 
-        <div>
-          {
-            this.props.project.pledges.map((pledge, idx) => (
-              <PledgeItem
-                key={pledge.id}
-                pledge={pledge}/>
-            ))
-          }
-        </div>
-
-        <div className="add-pledge">
-          { addpledge }
-        </div>
-
-        <h2>{project.location}</h2>
         <h2>{project.category}</h2>
       </div>
     );

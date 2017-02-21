@@ -106,3 +106,82 @@
 .contribute-button:hover {
   background-color: $button-green-hover;
 }
+
+
+.project-location i {
+  background-color: $light-gray;
+  padding: 5px;
+  margin: 15px 10px 15px 0px;
+}
+
+.project-body {
+  background-color: blue;
+
+  width: 100%;
+  display: flex;
+}
+
+.project-body-title {
+  background-color: white;
+
+  margin-top: 60px;
+  margin-bottom: 45px;
+  font-size: 18px;
+}
+
+.project-body-text {
+  // width: 66%;
+  display: block;
+  width: 770px;
+}
+
+.project-body-right {
+  background-color: green;
+
+  margin-left: 30px;
+  width: 330px;
+
+}
+
+.add-pledge {
+//Why isn't it takeing up height and the appropriate width?!!?
+  margin-bottom: 0px;
+}
+
+
+.pledge-button {
+  background-color: $pledge-box;
+
+  padding: 30px 25px;
+  border: 1px solid $pledge-border;
+  border-radius: 5px;
+  margin-bottom: 20px;
+}
+
+.pledge-button:hover{
+  background-color: $button-green;
+  border: 1px solid $button-green-hover;
+  cursor: pointer;
+}
+
+.pledge-item h1 {
+  font-size: 18px;
+  color: $pledge-level;
+  margin-bottom: 25px;
+}
+
+.pledge-item h2 {
+  font-size: 16px;
+  color: $pledge-title;
+  margin-bottom: 20px;
+}
+
+.pledge-item h3 {
+  font-size: 14px;
+  color: $pledge-description;
+  margin-bottom: 20px;
+}
+.pledge-item h4 {
+  font-size: 12px;
+  color: $pledge-description;
+}

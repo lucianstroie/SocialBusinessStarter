@@ -18,7 +18,6 @@ class Api::PledgesController < ApplicationController
   end
 
   def update
-    debugger
     @pledge = current_user.pledges.find(params[:id])
     if @pledge.update(pledge_params)
       render :show
