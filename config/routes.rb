@@ -5,7 +5,11 @@ Rails.application.routes.draw do
     resources :projects
     resources :pledges, only: [:create, :update, :destroy, :show]
     resources :givings, only: [:create, :show]
+
+    get "projects/search", to: "projects#search"
   end
+
+
 
   root "static_pages#root"
 end

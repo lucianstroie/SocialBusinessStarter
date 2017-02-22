@@ -17,6 +17,14 @@ class SessionForm extends React.Component {
 		this.redirectIfLoggedIn();
 	}
 
+	componentWillReceiveProps(newProps){
+		if (this.props.formType !== newProps.formType) {
+			this.props.clearErrors({});
+			this.setState({ username: "", password: "",
+				name: "", location: "", imageFile: null, imageURL: null });
+		}
+	}
+
 	redirectIfLoggedIn() {
 		if (this.props.loggedIn) {
 			this.props.router.push("/");
@@ -41,7 +49,9 @@ class SessionForm extends React.Component {
 				formData.append("user[password]", this.state.password);
 				formData.append("user[name]", this.state.name);
 				formData.append("user[location]", this.state.location);
-				formData.append("user[image]", this.state.imageFile);
+				if (this.state.imageFile) {
+					formData.append("user[image]", this.state.imageFile);
+				}
 				this.props.processForm(formData);
 			}
 

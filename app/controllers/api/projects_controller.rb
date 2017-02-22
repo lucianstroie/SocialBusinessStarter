@@ -11,7 +11,7 @@ class Api::ProjectsController < ApplicationController
 	end
 
   def index
-    @projects = Project.all
+    @projects = Project.all.includes(pledges: :givings)
   end
 
   def show
