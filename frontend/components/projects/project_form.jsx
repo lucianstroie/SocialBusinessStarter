@@ -8,7 +8,7 @@ class ProjectForm extends React.Component {
     this.updateFile = this.updateFile.bind(this);
 
     this.state = this.props.project || {title: "", subtitle: "", goal: 0, body: "",
-      end_date: Date.now() , category: "", location: ""};
+      end_date: Date.today , category: "", location: ""};
   }
 
   renderErrors() {

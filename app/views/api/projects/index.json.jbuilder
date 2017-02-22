@@ -16,7 +16,7 @@
     percent = (sum_total / project.goal) * 100
     json.percent percent
 
-    json.days_left (Date.today - project.end_date)
+    json.days_left project.end_date
 
   end
 end

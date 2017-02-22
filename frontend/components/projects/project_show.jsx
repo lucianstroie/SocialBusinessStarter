@@ -1,6 +1,7 @@
 import React from 'react';
 import { Link } from 'react-router';
 import PledgeItem from '../pledges/pledge';
+import Moment from 'moment';
 
 import PledgeFormContainer from '../pledges/pledge_form_container';
 
@@ -64,7 +65,7 @@ class ProjectShow extends React.Component {
               </div>
 
               <div className="days-left">
-                <h1>{project.days_left}</h1>
+                <h1>{Moment(project.days_left).diff(Moment(),'days')}</h1>
                 <h2>days left</h2>
               </div>
               <button className="contribute-button">Back This Project</button>
@@ -108,6 +109,6 @@ class ProjectShow extends React.Component {
   }
 }
 
-          
+
 
 export default ProjectShow;

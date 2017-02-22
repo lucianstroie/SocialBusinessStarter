@@ -1,5 +1,6 @@
 import React from 'react';
 import { Link, hashHistory } from 'react-router';
+import Moment from 'moment';
 
 
 const ProjectIndexItem = ({ project }) => {
@@ -35,7 +36,10 @@ const ProjectIndexItem = ({ project }) => {
             <h2 className="user-project">pledged</h2>
           </li>
           <li>
-            <h4 className="summary-project">{project.days_left}</h4>
+            <h4 className="summary-project">
+              {Moment(project.days_left).diff(Moment(),'days')}
+
+            </h4>
             <h2 className="user-project">days to go</h2>
           </li>
         </ul>
