@@ -17,7 +17,7 @@ class ProjectShow extends React.Component {
 
 
   render(){
-    
+
 
     let addpledge = "";
     const project = this.props.project;
@@ -30,6 +30,8 @@ class ProjectShow extends React.Component {
         addpledge = <Link to={link}>Add A Pledge Level</Link>;
       }
     }
+
+
 
     return (
       <div className="project-show-page">
@@ -51,12 +53,12 @@ class ProjectShow extends React.Component {
 
           <div className="project-summary-details">
             <div className="raised">
-              <h1>$AMOUNT RAISED</h1>
-              <h2>pledged of $50,000</h2>
+              <h1>${project.sum_total} RAISED</h1>
+              <h2>pledged of ${project.goal}</h2>
             </div>
 
             <div className="backers">
-              <h1>1,234</h1>
+              <h1>{project.backers}</h1>
               <h2>backers</h2>
             </div>
 

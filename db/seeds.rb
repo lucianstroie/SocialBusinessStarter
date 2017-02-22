@@ -15,3 +15,23 @@ Pledge.destroy_all
 Pledge.create({ project_id: Project.all.first.id, level: 5, title: "pledge one", description: "here is the des"})
 Pledge.create({ project_id: Project.all.second.id, level: 99, title: "pledge two", description: "here is the des"})
 Pledge.create({ project_id: Project.all.second.id, level: 9, title: "pledge twotwo", description: "here is the des"})
+
+Giving.destroy_all
+
+Giving.create({ user_id: User.first.id, pledge_id: Pledge.first.id})
+Giving.create({ user_id: User.first.id, pledge_id: Pledge.first.id})
+Giving.create({ user_id: User.first.id, pledge_id: Pledge.first.id})
+Giving.create({ user_id: User.first.id, pledge_id: Pledge.first.id})
+Giving.create({ user_id: User.first.id, pledge_id: Pledge.first.id})
+Giving.create({ user_id: User.first.id, pledge_id: Pledge.first.id})
+Giving.create({ user_id: User.first.id, pledge_id: Pledge.first.id})
+Giving.create({ user_id: User.second.id, pledge_id: Pledge.second.id})
+Giving.create({ user_id: User.second.id, pledge_id: Pledge.second.id})
+Giving.create({ user_id: User.second.id, pledge_id: Pledge.second.id})
+Giving.create({ user_id: User.second.id, pledge_id: Pledge.third.id})
+Giving.create({ user_id: User.second.id, pledge_id: Pledge.third.id})
+Giving.create({ user_id: User.second.id, pledge_id: Pledge.third.id})
+Giving.create({ user_id: User.second.id, pledge_id: Pledge.third.id})
+Giving.create({ user_id: User.second.id, pledge_id: Pledge.third.id})
+Giving.create({ user_id: User.second.id, pledge_id: Pledge.third.id})
+Giving.create({ user_id: User.second.id, pledge_id: Pledge.third.id})

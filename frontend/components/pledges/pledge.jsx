@@ -34,7 +34,7 @@ class PledgeItem extends React.Component {
         <h1>Pledge {pledge.level} or more</h1>
         <h2>{pledge.title}</h2>
         <h3>{pledge.description}</h3>
-        <h4>num of backers</h4>
+        <h4>{pledge.giving_count} backers have contributed!</h4>
         <div className={screenClass}></div>
       </div>
     );

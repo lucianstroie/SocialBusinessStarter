@@ -8,7 +8,7 @@ json.owner_pic asset_path(@project.user.image.url)
 json.days_left (Date.today - @project.end_date)
 
 
-json.total_givings @project.givings.count
+json.backers @project.givings.count
 
 sum_total = 0
 
@@ -25,3 +25,6 @@ json.pledges @project.pledges.each do |pledge|
 end
 
 json.sum_total sum_total
+
+percent = (sum_total / @project.goal) * 100
+json.percent percent

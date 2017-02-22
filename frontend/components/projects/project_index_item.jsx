@@ -21,6 +21,9 @@ const ProjectIndexItem = ({ project }) => {
 
       <div className="project-widget-summary">
         <h3 className="location-project">{project.location}</h3>
+        <h4>{project.goal}% funded</h4>
+        <h4>{project.sum_total} pledged</h4>
+        <h4>{project.days_left} days to go</h4>
       </div>
     </div>
   );
