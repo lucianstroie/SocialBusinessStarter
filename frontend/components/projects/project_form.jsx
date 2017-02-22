@@ -7,7 +7,7 @@ class ProjectForm extends React.Component {
     this.handleChange = this.handleChange.bind(this);
     this.updateFile = this.updateFile.bind(this);
 
-    this.state = this.props.project || {title: "", subtitle: "", body: "",
+    this.state = this.props.project || {title: "", subtitle: "", goal: 0, body: "",
       end_date: Date.now() , category: "", location: ""};
   }
 
@@ -41,6 +41,7 @@ class ProjectForm extends React.Component {
     let formData = new FormData();
     formData.append("project[title]", this.state.title);
     formData.append("project[subtitle]", this.state.subtitle);
+    formData.append("project[goal]", this.state.goal);
     formData.append("project[body]", this.state.body);
     formData.append("project[end_date]", this.state.end_date);
     formData.append("project[category]", this.state.category);
@@ -97,6 +98,12 @@ class ProjectForm extends React.Component {
                   onChange={this.update("subtitle")}
                   className="project-input"
                   placeholder="Subtitle" />
+                  <br/>
+                <input type="integer"
+                  value={this.state.goal}
+                  onChange={this.update("goal")}
+                  className="project-input"
+                   />
                   <br/>
         					<input type="file" onChange={this.updateFile}
         						className="form-box" id='photo-upload-btn'/>

@@ -15,15 +15,31 @@ const ProjectIndexItem = ({ project }) => {
 
       <div className="text-container">
         <h3 className="title-project">{project.title}</h3>
-        <h2 className="user-project">by {project.user_id}</h2>
+        <h2 className="user-project">by {project.owner_name}</h2>
         <h2 className="subtitle-project">{project.subtitle}</h2>
       </div>
 
       <div className="project-widget-summary">
-        <h3 className="location-project">{project.location}</h3>
-        <h4>{project.goal}% funded</h4>
-        <h4>{project.sum_total} pledged</h4>
-        <h4>{project.days_left} days to go</h4>
+        <h3 className="location-project">
+          <i className="fa fa-map-marker fa-lg" aria-hidden="true"></i>
+          {project.location}</h3>
+        <div className="progress-bar"></div>
+        <div className="work-please">
+        <ul>
+          <li >
+            <h4 className="summary-project">{project.percent}%</h4>
+            <h2 className="user-project">funded</h2>
+          </li>
+          <li >
+            <h4 className="summary-project">{project.sum_total}</h4>
+            <h2 className="user-project">pledged</h2>
+          </li>
+          <li>
+            <h4 className="summary-project">{project.days_left}</h4>
+            <h2 className="user-project">days to go</h2>
+          </li>
+        </ul>
+      </div>
       </div>
     </div>
   );

@@ -28,13 +28,13 @@
 
 }
 
-.category-title {
-  background-color: green;
-
-  width: 100%;
-  display: inline-block;
-  justify-content: center;
-}
+// .category-title {
+//   background-color: green;
+//
+//   width: 100%;
+//   display: inline-block;
+//   justify-content: center;
+// }
 
 .project-widget {
   background-color: red;
@@ -53,6 +53,7 @@
 
 .project-widget:hover {
   background-color: green;
+
   cursor: pointer;
 }
 
@@ -66,30 +67,57 @@
 .text-container {
   background-color: white;
   padding: 15px 10px;
-  font-size: 16px;
-  height: 40%;
+
+  height: 31%;
   display: flex;
   flex-direction: column;
 }
 .text-container h3 {
   background-color: yellow;
+  font-size: 16px;
   margin: 0px
 }
 .user-project {
   margin-bottom: 10px;
 }
 
-.user-project, .subtitle-project {
+.user-project, .subtitle-project, .location-project {
   color: $text-detail;
   font-size: 12px;
 }
+
+
 .subtitle-project {
   min-height: 60px;
 }
 
-.location-project {
-  // margin-top: 20px;
-}
 .project-widget-summary {
-  height: 20%
+  font-size: 12px;
+}
+
+.progress-bar {
+  display: block;
+  height: 8px;
+  margin-left: 10px;
+  margin-bottom: 10px;
+  width: 94%;
+  background-color: $light-gray;
+  border-radius: 7px;
+}
+.project-widget-summary ul {
+  display: flex;
+  margin-left: 10px;
+}
+
+.project-widget-summary li {
+  align-content: space-between;;
+  padding: 5px;
+}
+
+.summary-project {
+  font-size: 14px;
+}
+
+.fa-map-marker {
+  padding: 0px 15px 15px 15px;
 }
