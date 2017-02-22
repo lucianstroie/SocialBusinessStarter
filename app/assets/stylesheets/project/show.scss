@@ -1,21 +1,24 @@
-.project-show-page{
+.background {
   background-color: $eggshell-lite;
-  width: 80%;
-  padding: 7% 10%;
-  font: $font-family;
-  align-items: center;
+  display: flex;
+  justify-content: center;
+}
+
+.project-show-page{
+  margin-top: 55px;
+
 }
 
 .project-show-top {
-  // background-color: yellow;
-
+  background-color: yellow;
+  
   display: flex;
   border-bottom: 0px;
   width: 100%
 }
 
 .project-user {
-  // background-color: orange;
+  background-color: orange;
 
   width: 200px;
   height: 150px;
@@ -32,21 +35,21 @@
 }
 
 .project-title-container h1 {
-  // background-color: green;
+  background-color: green;
 
   font-size: 36px;
   padding-bottom: 25px;
 }
 
 .project-title-container h2 {
-  // background-color: purple;
+  background-color: purple;
 
   font-size: 16px;
   color: $text-project-detail;
 }
 
 .project-summary {
-  // background-color: grey;
+  background-color: grey;
 
   width: 100%;
   border-bottom: 0px;

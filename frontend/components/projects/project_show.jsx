@@ -34,6 +34,7 @@ class ProjectShow extends React.Component {
 
 
     return (
+      <div className="background">
       <div className="project-show-page">
         <div className="project-show-top">
 
@@ -102,6 +103,7 @@ class ProjectShow extends React.Component {
 
         <h2>{project.category}</h2>
       </div>
+    </div>
     );
   }
 }
