@@ -32,7 +32,7 @@ const ProjectIndexItem = ({ project }) => {
             <h2 className="user-project">funded</h2>
           </li>
           <li >
-            <h4 className="summary-project">{project.sum_total}</h4>
+            <h4 className="summary-project">${project.sum_total}</h4>
             <h2 className="user-project">pledged</h2>
           </li>
           <li>

@@ -37,7 +37,7 @@ class Greeting extends React.Component {
         <section className="left">
 
           <Link to="/" className="explore"><i className="fa fa-compass fa-lg" aria-hidden="true"></i>Explore</Link>
-        	<Link to="/" className="new" >Start A New Project</Link>
+        	<Link to="/projects/new" className="new" >Start A New Project</Link>
         </section>
         <section className="center">
           <Link to="/" id="logo" >SocialBusinessStarter</Link>

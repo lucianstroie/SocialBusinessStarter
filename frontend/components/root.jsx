@@ -24,8 +24,8 @@ const Root = ({ store }) => {
 
   const _redirectIfNotLoggedIn = (nextState, replace) => {
     const currentUser = store.getState().session.currentUser;
-    if (currentUser) {
-      replace('/');
+    if (!currentUser) {
+      replace('/login');
     }
   };
 
@@ -37,9 +37,9 @@ const Root = ({ store }) => {
           <Route path="/login" component={ SessionFormContainer } onEnter={_redirectIfLoggedIn}/>
           <Route path="/signup" component={ SessionFormContainer } onEnter={_redirectIfLoggedIn}/>
           <Route path="/projects" component={ ProjectIndexContainer }/>
-          <Route path="/projects/new" component={ ProjectFormContainer }/>
+          <Route path="/projects/new" component={ ProjectFormContainer } onEnter={_redirectIfNotLoggedIn}/>
           <Route path="/projects/:projectId" component={ ProjectShowContainer }/>
-          <Route path="/projects/:projectId/edit" component={ ProjectFormContainer }/>
+          <Route path="/projects/:projectId/edit" component={ ProjectFormContainer } />
           <Route path="/projects/:projectId/addpledge" component={ PledgeFormContainer }/>
           <Route path="/pledges/:pledgeId/edit" component={ PledgeEditContainer }/>
         </Route>
