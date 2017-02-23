@@ -78,4 +78,4 @@ class PledgeEdit extends React.Component {
   }
 }
 
-export default PledgeEdit;
+export default withRouter(PledgeEdit);

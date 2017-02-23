@@ -2,7 +2,6 @@ import React from 'react';
 import { Link, hashHistory, Router } from 'react-router';
 import { withRouter } from 'react-router';
 
-// import GivingConfirmation from '../givings/giving_confirmation';
 
 class PledgeItem extends React.Component {
   constructor(props) {
@@ -41,7 +40,8 @@ class PledgeItem extends React.Component {
 
     let button = "";
     if(this.state.buttonVisible){
-      button = <button onClick={this.confirmPledge}>Confirm Contribution!</button>;
+      button = <button className="confirm-pledge contribute-button"
+        onClick={this.confirmPledge}>Confirm Contribution!</button>;
     }
 
 

@@ -1,21 +1,16 @@
 .background {
 
-
-  background-color: orange;
 }
 
 
 
 .index-background {
-  background-color: yellow;
   display: flex;
   justify-content: center;
 
 }
 
 .index-container {
-  background-color: pink;
-
   display: flex;
   justify-content: center;
   list-style: none;
@@ -37,12 +32,9 @@
 // }
 
 .project-widget {
-  background-color: red;
-
-  // max-width: 320px;
   border: 1px solid $form-border;
   border-radius: 6px;
-  width: calc(33.33% - 29px);
+  width: calc(33.33% - 45px);
   margin-top: 200px;
   margin-left: 20px;
 }
@@ -52,8 +44,6 @@
 }
 
 .project-widget:hover {
-  background-color: green;
-
   cursor: pointer;
 }
 
@@ -73,7 +63,6 @@
   flex-direction: column;
 }
 .text-container h3 {
-  background-color: yellow;
   font-size: 16px;
   margin: 0px
 }

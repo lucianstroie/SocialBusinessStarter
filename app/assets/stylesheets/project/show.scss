@@ -10,16 +10,12 @@
 }
 
 .project-show-top {
-  background-color: yellow;
-  
   display: flex;
   border-bottom: 0px;
   width: 100%
 }
 
 .project-user {
-  background-color: orange;
-
   width: 200px;
   height: 150px;
 }
@@ -35,22 +31,16 @@
 }
 
 .project-title-container h1 {
-  background-color: green;
-
   font-size: 36px;
   padding-bottom: 25px;
 }
 
 .project-title-container h2 {
-  background-color: purple;
-
   font-size: 16px;
   color: $text-project-detail;
 }
 
 .project-summary {
-  background-color: grey;
-
   width: 100%;
   border-bottom: 0px;
   display: flex;
@@ -119,15 +109,11 @@
 }
 
 .project-body {
-  background-color: blue;
-
   width: 100%;
   display: flex;
 }
 
 .project-body-title {
-  background-color: white;
-
   padding-top: 60px;
   padding-bottom: 45px;
   font-size: 18px;
@@ -140,8 +126,6 @@
 }
 
 .project-body-right {
-  background-color: green;
-
   margin-left: 30px;
   width: 330px;
 
@@ -173,6 +157,7 @@
   top: 0;
   left: 0;
   text-align: center;
+  cursor: pointer;
 }
 
 .pledge-screen:after {
@@ -201,3 +186,10 @@
   font-size: 12px;
   color: $pledge-description;
 }
+
+.confirm-pledge {
+  margin-top: 40px;
+}
+// .confirm-pledge:active {
+//   display:none;
+// }

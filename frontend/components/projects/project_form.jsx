@@ -1,4 +1,5 @@
 import React from 'react';
+import { withRouter } from 'react-router';
 
 class ProjectForm extends React.Component {
   constructor(props) {
@@ -50,6 +51,7 @@ class ProjectForm extends React.Component {
     formData.append("project[image]", this.state.imageFile);
 
     this.props.processForm(formData);
+    this.props.router.push('/');
   }
 
   handleChange(e) {
@@ -79,7 +81,7 @@ class ProjectForm extends React.Component {
 
     let title = (this.props.formType === "/projects/new") ? "Start A New Project!" : "Edit Your Project!";
 
-    
+
 
     return(
       <div>
@@ -151,4 +153,4 @@ class ProjectForm extends React.Component {
 
 }
 
-export default ProjectForm;
+export default withRouter(ProjectForm);
