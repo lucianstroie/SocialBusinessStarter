@@ -29,7 +29,7 @@ class ProjectShow extends React.Component {
       return (<div>Loading...
       </div>);
     } else {
-      if (window.currentUser && window.currentUser.id === project.user_id) {
+      if (this.props.currentUser && this.props.currentUser.id === project.user_id) {
         const link = `/projects/${project.id}/addpledge`;
         addpledge = <Link to={link}>Add A Pledge Level</Link>;
       }
@@ -99,7 +99,8 @@ class ProjectShow extends React.Component {
                       key={pledge.id}
                       pledge={pledge}
                       project={project}
-                      createGiving={this.props.createGiving}/>
+                      createGiving={this.props.createGiving}
+                      currentUser={this.props.currentUser}/>
                   ))
                 }
               </div>

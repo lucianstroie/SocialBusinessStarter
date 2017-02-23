@@ -8,7 +8,7 @@ class ProjectForm extends React.Component {
     this.handleChange = this.handleChange.bind(this);
     this.updateFile = this.updateFile.bind(this);
 
-    this.state = this.props.project || {title: "", subtitle: "", goal: 0, body: "",
+    this.state = this.props.project || {title: "", subtitle: "", goal: 1, body: "",
       end_date: Date.today , category: "", location: ""};
   }
 
@@ -50,7 +50,12 @@ class ProjectForm extends React.Component {
     formData.append("project[location]", this.state.location);
     formData.append("project[image]", this.state.imageFile);
 
-    this.props.processForm(formData);
+    if (this.props.project) {
+      formData.append("project[id]", this.props.project.id);
+    } else{
+      this.props.processForm(formData);
+    }
+
     this.props.router.push('/');
   }
 

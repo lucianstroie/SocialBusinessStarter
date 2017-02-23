@@ -36,7 +36,7 @@ class PledgeForm extends React.Component {
     e.preventDefault();
     this.props.createPledge(this.state);
     const url = `/projects/${this.state.project_id}`;
-    this.props.push(url);
+    this.props.router.push(url);
   }
 
   render() {

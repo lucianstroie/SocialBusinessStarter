@@ -8,6 +8,7 @@ const mapStateToProps = (state, ownProps) => {
 
   return({
   project: state.project[ownProps.params.projectId],
+  currentUser: state.session.currentUser,
   giving: state.giving
 });};
 

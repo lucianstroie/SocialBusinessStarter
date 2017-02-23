@@ -14,7 +14,7 @@ class PledgeItem extends React.Component {
 
 
   handleRedirect(e) {
-    if (window.currentUser && window.currentUser.id === this.props.project.user_id) {
+    if (this.props.currentUser && this.props.currentUser.id === this.props.project.user_id) {
 
       let url = `/pledges/${this.props.pledge.id}/edit`;
       this.props.router.push(url);
@@ -27,9 +27,12 @@ class PledgeItem extends React.Component {
   confirmPledge(e) {
     e.preventDefault();
 
-    this.props.createGiving({user_id: window.currentUser.id, pledge_id: this.props.pledge.id});
-
-    window.scrollTo( 0, 0 );
+    if (!this.props.currentUser) {
+      this.props.router.push("/login");
+    } else {
+      this.props.createGiving({user_id: this.props.currentUser.id, pledge_id: this.props.pledge.id});
+      window.scrollTo( 0, 0 );
+    }
   }
 
 
