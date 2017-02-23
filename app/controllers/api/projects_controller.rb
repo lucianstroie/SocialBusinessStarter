@@ -2,10 +2,8 @@ class Api::ProjectsController < ApplicationController
 
   def create
 
-		@project = Project.new(project_params)
-    @project.update!(project_image_params) if project_image_params[:image]
-    @project.user = current_user
-  
+		@project = current_user.projects.new(project_params)
+
 		if @project.save
 
 			render :show
@@ -41,10 +39,8 @@ class Api::ProjectsController < ApplicationController
 	private
 
 	def project_params
-		params.require(:project).permit(:user_id, :title, :subtitle, :body, :end_date, :category, :location, :goal)
+		params.require(:project).permit(:user_id, :title, :subtitle, :body, :end_date, :category, :location, :goal, :image)
 	end
 
-	def project_image_params
-		params.require(:project).permit(:image)
-	end
+
 end
