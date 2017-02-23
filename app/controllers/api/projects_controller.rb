@@ -33,11 +33,9 @@ class Api::ProjectsController < ApplicationController
     render :index
   end
 
-
-
 	private
 
 	def project_params
-		params.require(:project).permit(:user_id, :title, :subtitle, :body, :end_date, :category, :location, :goal)
+		params.require(:project).permit(:user_id, :title, :subtitle, :body, :end_date, :category, :location, :goal, :image)
 	end
 end

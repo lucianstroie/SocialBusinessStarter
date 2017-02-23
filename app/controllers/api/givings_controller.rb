@@ -1,11 +1,12 @@
 class Api::GivingsController < ApplicationController
 
   def create
-    @giving = Giving.new(giving_params)
-    if @giving.save
-      render :show
+    giving = Giving.new(giving_params)
+    if giving.save
+      @project = giving.pledge.project
+      render '/api/projects/show'
     else
-      render json: @giving.errors.full_messages, status: 422
+      render json: giving.errors.full_messages, status: 422
     end
   end
 

@@ -17,12 +17,14 @@ const ProjectReducer = (oldState = _nullProject, action) => {
         errors
       });
     case RECEIVE_PROJECT:
-      
+
       return merge({}, oldState, {[action.project.id]: action.project});
     case REMOVE_PROJECT:
       let newState = merge({}, oldState);
       delete newState[action.project.id];
       return newState;
+
+
     default:
       return oldState;
   }

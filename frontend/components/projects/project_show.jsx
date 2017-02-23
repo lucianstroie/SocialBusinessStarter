@@ -15,6 +15,9 @@ class ProjectShow extends React.Component {
     this.props.fetchProject(this.props.params.projectId);
   }
 
+  scrollDown() {
+    window.scrollTo( 0, 700 );
+  }
 
 
   render(){
@@ -68,7 +71,7 @@ class ProjectShow extends React.Component {
                 <h1>{Moment(project.days_left).diff(Moment(),'days')}</h1>
                 <h2>days left</h2>
               </div>
-              <button className="contribute-button">Back This Project</button>
+              <button className="contribute-button" onClick={this.scrollDown}>Back This Project</button>
             </div>
           </div>
 

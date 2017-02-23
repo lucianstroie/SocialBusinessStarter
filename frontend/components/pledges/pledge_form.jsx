@@ -1,4 +1,6 @@
 import React from 'react';
+import { withRouter } from 'react-router';
+
 
 class PledgeForm extends React.Component {
   constructor(props) {
@@ -33,7 +35,8 @@ class PledgeForm extends React.Component {
   handleSubmit(e) {
     e.preventDefault();
     this.props.createPledge(this.state);
-    //redirect to project show
+    const url = `/projects/${this.state.project_id}`;
+    this.props.push(url);
   }
 
   render() {
@@ -72,4 +75,4 @@ class PledgeForm extends React.Component {
   }
 }
 
-export default PledgeForm;
+export default withRouter(PledgeForm);

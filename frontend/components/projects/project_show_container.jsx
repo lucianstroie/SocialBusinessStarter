@@ -7,7 +7,8 @@ import { createGiving } from '../../actions/giving_actions';
 const mapStateToProps = (state, ownProps) => {
 
   return({
-  project: state.project[ownProps.params.projectId]
+  project: state.project[ownProps.params.projectId],
+  giving: state.giving
 });};
 
 const mapDispatchToProps = dispatch => {

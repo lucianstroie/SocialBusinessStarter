@@ -26,5 +26,11 @@ end
 
 json.sum_total sum_total
 
-percent = (sum_total / @project.goal) * 100
+if @project.goal < 1
+  safegoal = 1
+else
+  safegoal = @project.goal
+end
+
+percent = (sum_total / safegoal) * 100
 json.percent percent

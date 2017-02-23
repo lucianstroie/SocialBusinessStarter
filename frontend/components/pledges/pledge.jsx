@@ -29,9 +29,7 @@ class PledgeItem extends React.Component {
 
     this.props.createGiving({user_id: window.currentUser.id, pledge_id: this.props.pledge.id});
 
-    //better ways to refresh?
-    // let url = `/projects/${this.props.project.id}`;
-    // this.props.router.push(url);
+    window.scrollTo( 0, 0 );
   }
 
 
