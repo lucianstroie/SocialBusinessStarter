@@ -8,6 +8,5 @@ export const receiveGiving = giving => ({
 });
 
 export const createGiving = giving => dispatch => {
-  debugger
   return APIUtil.createGiving(giving).then(giving => dispatch(receiveGiving(giving)))
 };

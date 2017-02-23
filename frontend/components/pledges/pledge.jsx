@@ -2,7 +2,7 @@ import React from 'react';
 import { Link, hashHistory, Router } from 'react-router';
 import { withRouter } from 'react-router';
 
-import GivingConfirmation from '../givings/giving_confirmation';
+// import GivingConfirmation from '../givings/giving_confirmation';
 
 class PledgeItem extends React.Component {
   constructor(props) {
@@ -27,8 +27,12 @@ class PledgeItem extends React.Component {
 
   confirmPledge(e) {
     e.preventDefault();
-    
+
     this.props.createGiving({user_id: window.currentUser.id, pledge_id: this.props.pledge.id});
+
+    //better ways to refresh?
+    // let url = `/projects/${this.props.project.id}`;
+    // this.props.router.push(url);
   }
 
 

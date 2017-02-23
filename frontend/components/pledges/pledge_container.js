@@ -2,8 +2,9 @@ import { connect } from 'react-redux';
 import PledgeItem from './pledge';
 import { withRouter } from 'react-router';
 
+//may never be used!
+
 const  mapStateToProps = state => {
-  debugger THIS WAS NEVER HITTING!!
  return({
    pledge: state.pledge
  });
