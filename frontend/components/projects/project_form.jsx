@@ -79,6 +79,8 @@ class ProjectForm extends React.Component {
 
     let title = (this.props.formType === "/projects/new") ? "Start A New Project!" : "Edit Your Project!";
 
+    
+
     return(
       <div>
         <div className="project-form-background">

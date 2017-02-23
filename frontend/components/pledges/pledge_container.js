@@ -1,9 +1,13 @@
 import { connect } from 'react-redux';
-import PledgeItem from './pledge_item';
+import PledgeItem from './pledge';
+import { withRouter } from 'react-router';
 
-const  mapStateToProps = state => ({
- pledge: state.pledge
-});
+const  mapStateToProps = state => {
+  debugger THIS WAS NEVER HITTING!!
+ return({
+   pledge: state.pledge
+ });
+};
 
 const mapDispatchToProps = dispatch => ({
 
@@ -12,4 +16,4 @@ const mapDispatchToProps = dispatch => ({
 export default connect(
   mapStateToProps,
   mapDispatchToProps
-)(PledgeItem);
+)(withRouter(PledgeItem));

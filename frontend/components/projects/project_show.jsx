@@ -94,7 +94,9 @@ class ProjectShow extends React.Component {
                   this.props.project.pledges.map((pledge, idx) => (
                     <PledgeItem
                       key={pledge.id}
-                      pledge={pledge}/>
+                      pledge={pledge}
+                      project={project}
+                      createGiving={this.props.createGiving}/>
                   ))
                 }
               </div>
