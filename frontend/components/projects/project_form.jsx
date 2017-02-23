@@ -48,13 +48,13 @@ class ProjectForm extends React.Component {
     formData.append("project[category]", this.state.category);
     formData.append("project[end_date]", this.state.end_date);
     formData.append("project[location]", this.state.location);
-    formData.append("project[image]", this.state.imageFile);
+    if (this.state.imageFile) formData.append("project[image]", this.state.imageFile);
 
     if (this.props.project) {
+      
       formData.append("project[id]", this.props.project.id);
-    } else{
-      this.props.processForm(formData);
     }
+    this.props.processForm(formData);
 
     this.props.router.push('/');
   }
