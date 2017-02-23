@@ -1,6 +1,7 @@
 import React from 'react';
 import { Link, hashHistory } from 'react-router';
 import Moment from 'moment';
+import { Line } from 'rc-progress';
 
 
 const ProjectIndexItem = ({ project }) => {
@@ -24,7 +25,12 @@ const ProjectIndexItem = ({ project }) => {
         <h3 className="location-project">
           <i className="fa fa-map-marker fa-lg" aria-hidden="true"></i>
           {project.location}</h3>
-        <div className="progress-bar"></div>
+
+        <div className="progress-bar">
+          <Line percent={project.percent} strokeWidth="3"
+            strokeColor="rgb(37,203,104)" trailWidth="3"/>
+        </div>
+
         <div className="work-please">
         <ul>
           <li >

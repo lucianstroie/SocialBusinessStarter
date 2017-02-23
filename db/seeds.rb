@@ -8,7 +8,7 @@ User.create({username: "user4", password: "starwars", name: "REALLLLLLLY LONNGGG
 
 Project.destroy_all
 
-Project.create({ user_id: User.all.first.id, goal: 999999, title: "first", subtitle: "works", body: "I wish", end_date: (Date.today + 30), category: "anything", location: "here"})
+Project.create({ user_id: User.all.first.id, goal: 90, title: "first", subtitle: "works", body: "I wish", end_date: (Date.today + 30), category: "anything", location: "here", image: "http://s3.amazonaws.com/socialbusinessstarter-pro/projects/images/000/000/026/original/Screen_Shot_2017-01-25_at_8.53.44_PM.png?1487886726"})
 Project.create({ user_id: User.all.first.id, goal: 999999, title: "Second Project with a much longer multi line name", subtitle: "Second Project with a much longer multi line nameSecond Project with a much longer multi line nameSecond Project with a much longer multi line name", body: "I wish", end_date: (Date.today + 30), category: "anything", location: "here"})
 Project.create({ user_id: User.all.second.id, goal: 888, title: "nexxt", subtitle: "works", body: "I wish", end_date: (Date.today + 30), category: "anything", location: "here"})
 Project.create({ user_id: User.all.second.id, goal: 7, title: "third", subtitle: "works", body: "I wish", end_date: (Date.today + 60), category: "anything", location: "here"})
@@ -17,8 +17,8 @@ Project.create({ user_id: User.all.fourth.id, goal: 7, title: "third", subtitle:
 Pledge.destroy_all
 
 Pledge.create({ project_id: Project.all.first.id, level: 5, title: "pledge one", description: "here is the des"})
-Pledge.create({ project_id: Project.all.first.id, level: 5, title: "pledge two with a REALLLLLLLY long tititle", description: "pledge two with a REALLLLLLLY long tititle pledge two with a REALLLLLLLY long tititlepledge two with a REALLLLLLLY long tititlepledge two with a REALLLLLLLY long tititle"})
-Pledge.create({ project_id: Project.all.first.id, level: 5, title: "pledge three", description: "here is the des"})
+Pledge.create({ project_id: Project.all.first.id, level: 25, title: "pledge two with a REALLLLLLLY long tititle", description: "pledge two with a REALLLLLLLY long tititle pledge two with a REALLLLLLLY long tititlepledge two with a REALLLLLLLY long tititlepledge two with a REALLLLLLLY long tititle"})
+Pledge.create({ project_id: Project.all.first.id, level: 75, title: "pledge three", description: "here is the des"})
 Pledge.create({ project_id: Project.all.second.id, level: 99, title: "pledge two", description: "here is the des"})
 Pledge.create({ project_id: Project.all.second.id, level: 9, title: "pledge twotwo", description: "here is the des"})
 

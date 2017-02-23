@@ -33,6 +33,7 @@ class Api::ProjectsController < ApplicationController
     render :index
   end
 
+
 	private
 
 	def project_params

@@ -85,14 +85,20 @@
 }
 
 .progress-bar {
-  display: block;
+  // display: block;
   height: 8px;
   margin-left: 10px;
   margin-bottom: 10px;
   width: 94%;
-  background-color: $light-gray;
-  border-radius: 7px;
+  display: table;
 }
+
+.rc-progress-bar {
+background-color: pink;
+ height: 10px;
+}
+
+
 .project-widget-summary ul {
   display: flex;
   margin-left: 10px;
