@@ -1,7 +1,7 @@
 
 json.partial! '/api/projects/project', project: @project
 
-json.owner_name @project.user.username
+json.owner_name @project.user.name
 
 json.owner_pic asset_path(@project.user.image.url)
 

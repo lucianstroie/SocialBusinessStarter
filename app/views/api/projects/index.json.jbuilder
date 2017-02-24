@@ -1,7 +1,7 @@
 @projects.each do |project|
   json.set! project.id do
     json.partial! 'project', project: project
-    json.owner_name project.user.username
+    json.owner_name project.user.name
     json.sum_total
     json.days_left
 

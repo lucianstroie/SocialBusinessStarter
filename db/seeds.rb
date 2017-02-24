@@ -3,16 +3,26 @@ User.destroy_all
 
 User.create({username: "guest", password: "starwars", name: "noName"})
 User.create({username: "test", password: "starwars", name: "testName"})
-User.create({username: "user3", password: "starwars", name: "Short"})
-User.create({username: "user4", password: "starwars", name: "REALLLLLLLY LONNGGGG NAMMME"})
+User.create({username: "lstroie", password: "starwars", name: "Lucian Stroie"})
+User.create({username: "manunrux", password: "starwars", name: "Emanuele and Ruxandra"})
+User.create({username: "istvan", password: "starwars", name: "Istvan Mar",
+  image: "https://s3.amazonaws.com/socialbusinessstarter-seed/sbs-pics/users/Poza_Mar+Istvan_Asociatia+Fructu+Secuiesc_FINAL.jpg"})
 
 Project.destroy_all
 
-Project.create({ user_id: User.all.first.id, goal: 90, title: "first", subtitle: "works", body: "I wish", end_date: (Date.today + 30), category: "anything", location: "here", image: "https://s3.amazonaws.com/socialbusinessstarter-seed/sbs-pics/projects/fructul_secuiesc.jpg"})
-Project.create({ user_id: User.all.first.id, goal: 999999, title: "Second Project with a much longer multi line name", subtitle: "Second Project with a much longer multi line nameSecond Project with a much longer multi line nameSecond Project with a much longer multi line name", body: "I wish", end_date: (Date.today + 30), category: "anything", location: "here"})
-Project.create({ user_id: User.all.second.id, goal: 888, title: "nexxt", subtitle: "works", body: "I wish", end_date: (Date.today + 30), category: "anything", location: "here"})
-Project.create({ user_id: User.all.second.id, goal: 7, title: "third", subtitle: "works", body: "I wish", end_date: (Date.today + 60), category: "anything", location: "here"})
-Project.create({ user_id: User.all.fourth.id, goal: 7, title: "third", subtitle: "works", body: "I wish", end_date: (Date.today + 60), category: "anything", location: "here"})
+Project.create({ user_id: User.all.fourth.id, goal: 150000, title: "Babele.co", subtitle: "works", body: "I wish",
+  end_date: (Date.today + 30), category: "anything", location: "here"})
+Project.create({ user_id: User.all.third.id, goal: 999999, title: "Second Project with a much longer multi line name",
+  subtitle: "Second Project with a much longer multi line nameSecond Project with a much longer multi line nameSecond Project with a much longer multi line name",
+  body: "I wish", end_date: (Date.today + 30), category: "anything", location: "here", image: "https://s3.amazonaws.com/socialbusinessstarter-seed/sbs-pics/projects/winter-home.png"})
+Project.create({ user_id: User.all.third.id, goal: 888, title: "nexxt", subtitle: "works", body: "I wish",
+  end_date: (Date.today + 30), category: "anything", location: "here"})
+Project.create({ user_id: User.all.fifth.id, goal: 100000, title: "Szekler Fruit Association", subtitle: "Generating income for approximately 1,000 families in over 25 disadvantaged communities by using processing, packaging and distribution provided by the Company to capitalize on local crop varieties and traditional orchard fruits and forest fruits, using traditional recipes and processing techniques.",
+  body: "Istvan Székely Mar Fruit Association established in 2010 to generate revenues at rural communities using traditional varieties of fruit orchards, berries and mushrooms in the forests under the supervision of the local community. Istvan gained experience as a social entrepreneur in local economic development projects in the FAO / IPGRI implemented in Nepal, Morocco and Peru. In these projects the main goal was to identify natural resources with greater value and initiate economic development in the interest and participation of local communities. Similar initiatives have been launched in other countries such as Hungary, but a very moderate success which prompted Istvan to return home, where there are rural communities consistent.",
+  end_date: (Date.today + 60), category: "Rural", location: "Odorhei, Romania",
+  image: "https://s3.amazonaws.com/socialbusinessstarter-seed/sbs-pics/projects/fructul_secuiesc.jpg"})
+Project.create({ user_id: User.all.fourth.id, goal: 7, title: "third", subtitle: "works", body: "I wish",
+  end_date: (Date.today + 60), category: "anything", location: "here"})
 
 Pledge.destroy_all
 
