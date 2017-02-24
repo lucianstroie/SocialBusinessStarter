@@ -108,7 +108,7 @@ class ProjectShow extends React.Component {
 
           </div>
 
-          <h2>{project.category}</h2>
+          
         </div>
       </div>
     );
