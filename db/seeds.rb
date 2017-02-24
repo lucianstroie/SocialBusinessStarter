@@ -8,7 +8,7 @@ User.create({username: "user4", password: "starwars", name: "REALLLLLLLY LONNGGG
 
 Project.destroy_all
 
-Project.create({ user_id: User.all.first.id, goal: 90, title: "first", subtitle: "works", body: "I wish", end_date: (Date.today + 30), category: "anything", location: "here", image: "http://s3.amazonaws.com/socialbusinessstarter-pro/projects/images/000/000/040/original/Screen_Shot_2017-01-25_at_8.53.44_PM.png?1487894226"})
+Project.create({ user_id: User.all.first.id, goal: 90, title: "first", subtitle: "works", body: "I wish", end_date: (Date.today + 30), category: "anything", location: "here", image: "https://s3.amazonaws.com/socialbusinessstarter-seed/sbs-pics/projects/fructul_secuiesc.jpg"})
 Project.create({ user_id: User.all.first.id, goal: 999999, title: "Second Project with a much longer multi line name", subtitle: "Second Project with a much longer multi line nameSecond Project with a much longer multi line nameSecond Project with a much longer multi line name", body: "I wish", end_date: (Date.today + 30), category: "anything", location: "here"})
 Project.create({ user_id: User.all.second.id, goal: 888, title: "nexxt", subtitle: "works", body: "I wish", end_date: (Date.today + 30), category: "anything", location: "here"})
 Project.create({ user_id: User.all.second.id, goal: 7, title: "third", subtitle: "works", body: "I wish", end_date: (Date.today + 60), category: "anything", location: "here"})
