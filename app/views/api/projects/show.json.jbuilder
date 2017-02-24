@@ -27,10 +27,10 @@ end
 json.sum_total sum_total
 
 if @project.goal < 1
-  safegoal = 1
+  safegoal = 1.0
 else
-  safegoal = @project.goal
+  safegoal = @project.goal * 1.0
 end
 
-percent = (sum_total / safegoal) * 100
+percent = (sum_total / safegoal).round(2) * 100
 json.percent percent

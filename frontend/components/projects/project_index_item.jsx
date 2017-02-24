@@ -27,7 +27,7 @@ const ProjectIndexItem = ({ project }) => {
           {project.location}</h3>
 
         <div className="progress-bar">
-          <Line percent={project.percent} strokeWidth="3"
+          <Line percent={(project.percent > 100 ? 100 : project.percent)} strokeWidth="3"
             strokeColor="rgb(37,203,104)" trailWidth="3"/>
         </div>
 
