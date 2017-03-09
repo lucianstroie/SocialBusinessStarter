@@ -12,7 +12,7 @@ const ProjectIndexItem = ({ project }) => {
   };
 
   return (
-    <div className="project-widget" onClick={linkToProject}>
+    <div className="project-widget" onClick={linkToProject} key={project.id}>
       <img className="pic-project" src={project.image_url} />
 
       <div className="text-container">

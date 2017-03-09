@@ -4,18 +4,12 @@ import {
    } from '../actions/project_actions';
 import merge from 'lodash/merge';
 
-const _nullProjects = Object.freeze({
-  projects: {},
-  errors: []
-});
+const _nullProjects = Object.freeze({});
 
 const ProjectsReducer = (oldState = _nullProjects, action) => {
   switch (action.type) {
     case RECEIVE_PROJECT_ERRORS:
-      const errors = action.errors;
-      return merge({}, oldState, {
-        errors
-      });
+      return merge({}, oldState);
     case RECEIVE_ALL_PROJECTS:
       return merge({}, action.projects);
     default:
