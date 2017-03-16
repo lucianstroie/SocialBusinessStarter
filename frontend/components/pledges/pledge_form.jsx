@@ -52,7 +52,7 @@ class PledgeForm extends React.Component {
                 value={this.state.level}
                 onChange={this.update("level")}
                 className="pledge-input"
-                placeholder="Pledge Title" />
+                placeholder="Pledge Level" />
               <input type="text"
                 value={this.state.title}
                 onChange={this.update("title")}

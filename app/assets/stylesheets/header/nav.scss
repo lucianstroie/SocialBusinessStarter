@@ -29,6 +29,10 @@ section:last-child > span { margin-left: auto; }
     width: auto;
 }
 
+.header-group img {
+  margin-right: 15px;
+}
+
 
 .left > li{
   margin: 0px 25px;
@@ -39,7 +43,7 @@ section:last-child > span { margin-left: auto; }
 }
 
 .center {
-  padding: 25px;
+  padding: 18px;
 }
 
 .user-pic {
@@ -57,4 +61,12 @@ section:last-child > span { margin-left: auto; }
 
 .left > a > i {
   padding-right: 3px;
+}
+
+#logo {
+  font-family: 'Fredoka One', cursive;
+  font-size: 20px;
+}
+#logo span{
+  color: $logo-green;
 }

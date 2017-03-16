@@ -58,8 +58,8 @@ class ProjectShow extends React.Component {
 
             <div className="project-summary-details">
               <div className="raised">
-                <h1>${project.sum_total} RAISED</h1>
-                <h2>pledged of ${project.goal}</h2>
+                <h1>${project.sum_total}</h1>
+                <h2>pledged of ${project.goal} goal</h2>
               </div>
 
               <div className="backers">
@@ -108,7 +108,7 @@ class ProjectShow extends React.Component {
 
           </div>
 
-          
+
         </div>
       </div>
     );
