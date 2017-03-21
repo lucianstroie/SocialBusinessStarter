@@ -116,3 +116,22 @@ background-color: pink;
 .fa-map-marker {
   padding: 0px 15px 15px 15px;
 }
+
+.carousel {
+  height: 630px;
+}
+
+.carousel img {
+  height: 630px;
+  object-fit: cover;
+}
+
+.slider-button {
+  padding: 40px;
+  color: white;
+  opacity: 0.75;
+}
+
+.slider-button:hover {
+  opacity: 1;
+}
