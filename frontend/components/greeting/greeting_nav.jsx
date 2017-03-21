@@ -43,7 +43,6 @@ class Greeting extends React.Component {
           <Link to="/" id="logo" >Social<span>Business</span>Starter</Link>
         </section>
         <section className="right">
-					<a href="#"><i className="fa fa-search" aria-hidden="true"></i></a>
         {this.rightNav(this.props)}
         </section>
 
@@ -52,5 +51,6 @@ class Greeting extends React.Component {
   }
 }
 
+// <a href="#"><i className="fa fa-search" aria-hidden="true"></i></a>
 
 export default Greeting;
