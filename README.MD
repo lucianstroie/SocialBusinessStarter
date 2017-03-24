@@ -5,7 +5,7 @@ Social Business Starter is a Kickstarter Clone created by Lucian Stroie. It feat
 
 [Live Here](http://www.socialbusinessstarter.com/)
 
-![](./app/assets/images/sbs.gif)
+![](./app/assets/images/sbs2.gif)
 
 
 # Structure
