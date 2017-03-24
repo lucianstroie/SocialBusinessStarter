@@ -1,7 +1,7 @@
 
 # Summary
 
-Social Business Starter is a Kickstarter Clone created by Lucian Stroie. It features social businesses listed as projects each with multiple pledge levels that users can choose to back. Take a look at the live site at SocialBusinessStarter.com - you can register as a new user and upload a profile picture or you can use the guest log-in button.
+Social Business Starter is a Kickstarter Clone created by Lucian Stroie. It features social businesses listed as projects each with multiple pledge levels that users can choose to back. You can register as a new user and upload a profile picture or you can use the guest log-in button. Create a new project by adding a picture and creating different pledge levels. Contribute to existing projects and see it all update instantly.
 
 [Live Here](http://www.socialbusinessstarter.com/)
 
