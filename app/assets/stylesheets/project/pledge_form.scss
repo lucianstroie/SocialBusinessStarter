@@ -4,6 +4,7 @@
   justify-content: center;
   background-color: $eggshell;
   padding: 60px 0px;
+  box-shadow: 0px 500px 0px 500px $eggshell;
 }
 
 .pledge-form-container {
@@ -15,9 +16,16 @@
   font-family: $font-family;
   border-radius: 1px;
 }
+
 .pledge-form {
   background-color: inherit;
   padding: 25px 10px 10px 10px;
+}
+
+.pledge-form ul {
+  color: red;
+  margin-left: 20px;
+  margin-bottom: -5px;
 }
 
 .pledge-input {

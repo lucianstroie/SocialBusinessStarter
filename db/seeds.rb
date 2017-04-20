@@ -1,7 +1,7 @@
 
 User.destroy_all
 
-User.create({username: "guest", password: "starwars", name: "noName",
+User.create({username: "guest", password: "starwars", name: "Bill Drayton",
   image: "https://s3.amazonaws.com/socialbusinessstarter-seed/sbs-pics/users/bear.png"})
 User.create({username: "test", password: "starwars", name: "testName"})
 User.create({username: "lstroie", password: "starwars", name: "Lucian Stroie",

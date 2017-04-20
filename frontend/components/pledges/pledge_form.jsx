@@ -8,7 +8,7 @@ class PledgeForm extends React.Component {
     this.state = {
       title: "",
       description: "",
-      level: 0,
+      level: "",
       project_id: this.props.params.projectId
     };
     this.handleSubmit = this.handleSubmit.bind(this);
@@ -34,9 +34,9 @@ class PledgeForm extends React.Component {
 
   handleSubmit(e) {
     e.preventDefault();
-    this.props.createPledge(this.state);
+    // this.state.level || this.state.level = 1;
     const url = `/projects/${this.state.project_id}`;
-    this.props.router.push(url);
+    this.props.createPledge(this.state).then(() => this.props.router.push(url));
   }
 
   render() {
