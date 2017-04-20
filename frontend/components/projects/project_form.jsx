@@ -8,13 +8,13 @@ class ProjectForm extends React.Component {
     this.handleChange = this.handleChange.bind(this);
     this.updateFile = this.updateFile.bind(this);
 
-    this.state = this.props.project || {title: "", subtitle: "", goal: 1, body: "",
+    this.state = this.props.project || {title: "", subtitle: "", goal: "", body: "",
       end_date: Date.today , category: "", location: "", imageFile: null};
   }
 
   renderErrors() {
 		return(
-			<ul>
+			<ul id="errors">
 				{this.props.errors.map((error, i) => (
 					<li key={`error-${i}`}>
 						{error}
@@ -39,10 +39,11 @@ class ProjectForm extends React.Component {
 
   handleSubmit(e){
     e.preventDefault();
+
     let formData = new FormData();
     formData.append("project[title]", this.state.title);
     formData.append("project[subtitle]", this.state.subtitle);
-    formData.append("project[goal]", this.state.goal);
+    formData.append("project[goal]", this.state.goal||1);
     formData.append("project[body]", this.state.body);
     formData.append("project[end_date]", this.state.end_date);
     formData.append("project[category]", this.state.category);
@@ -54,9 +55,11 @@ class ProjectForm extends React.Component {
 
       formData.append("project[id]", this.props.project.id);
     }
-    this.props.processForm(formData);
+    let clearErrors = this.props;
 
-    this.props.router.push('/');
+    this.props.processForm(formData).then((project) => {
+      this.props.router.push(`/projects/${project.project.id}`);
+    });
   }
 
   handleChange(e) {
@@ -112,6 +115,8 @@ class ProjectForm extends React.Component {
                   value={this.state.goal}
                   onChange={this.update("goal")}
                   className="project-input"
+                  placeholder="Fundraising Goal"
+                  min="1"
                    />
                   <br/>
         					<input type="file" onChange={this.updateFile}
@@ -128,7 +133,6 @@ class ProjectForm extends React.Component {
                     <option value="Agriculture">Agriculture</option>
                     <option value="EcoTourism">EcoTourism</option>
                     <option value="Entrepreneurship">Entrepreneurship</option>
-                    <option value="Entrepreneurship">Entrepreneurship</option>
                     <option value="Education">Education</option>
                   </select>
                 <br/>
@@ -139,6 +143,7 @@ class ProjectForm extends React.Component {
                   placeholder="Location" />
                 <br/>
                 <input type="date"
+                  min={new Date().toISOString().split('T')[0]}
                   value={this.state.end_date}
                   onChange={this.update("end_date")}
                   className="project-input"/>
