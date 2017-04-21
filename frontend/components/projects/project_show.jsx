@@ -26,7 +26,7 @@ class ProjectShow extends React.Component {
     let addpledge = "";
     const project = this.props.project;
     if (!project) {
-      return (<div>Project Not Found</div>);
+      return (<div className="loading">Project Not Found</div>);
     } else {
       if (this.props.currentUser && this.props.currentUser.id === project.user_id) {
         const link = `/projects/${project.id}/addpledge`;
